@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'variables.scss';
+@import 'font-opensans.css';
+@import 'font-roboto.css';
+@import 'bootstrap-theme.scss';
+
+* {
+	font-family: "Open Sans";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+	font-family: "Roboto";
+}
+
+.drop-container {
+	box-shadow: $softdrop;
+	border-radius: 6px;
+	background-color: theme-color('primary');
+	position: relative;
+}
+
+.drop-container * {
+	background-color: transparent;
+}
+
+.drop-container-content {
+	padding: 1em;
+}
+
+body {
+	background-color: theme-color('dark');
+	padding: 2vh 10vh;
+}
