@@ -9,6 +9,18 @@ img {
 	margin: 2vh;
 }
 
+.badge-title{
+	position: absolute;
+    top: 0.2vh;
+    left: 2vh;
+    color: $text-on-secondary;
+    font-weight: 600;
+    box-shadow: 3px solid;
+    text-shadow: $lighttextdrop;
+    font-size: 40px;
+}
+
+
 div.side-container {
     border-radius: 20px;
 	background-color: theme-color('secondary');
@@ -24,7 +36,7 @@ div.side-container {
 }
 
 .drop-container-content {
-	padding-left: 1vh;
+	padding-left: 2vh;
 }
 
 div.side-wrapper{
