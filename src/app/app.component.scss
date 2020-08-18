@@ -1,14 +1,12 @@
 @import '../bootstrap-theme.scss';
 @import '../variables.scss';
 
-$left-margin: 300px;
-
 :host {
 	height: 100%;
 }
 
 app-crbadge {
-	padding-left: $left-margin;
+	padding-left: $content-margin;
 }
 
 .main-layout {
@@ -16,7 +14,7 @@ app-crbadge {
 }
 
 .project-layout {
-	margin-left: $left-margin;
+	margin-left: $content-margin;
 }
 
 .drop-container {
@@ -35,7 +33,7 @@ h3,
 h4,
 h5,
 h6 {
-	margin-left: $left-margin;
+	margin-left: $content-margin;
 	letter-spacing: -1px;
 	font-weight: 500;
 	margin-bottom: 0 !important;

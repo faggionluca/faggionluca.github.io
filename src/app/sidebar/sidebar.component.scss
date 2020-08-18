@@ -6,21 +6,27 @@ img {
 	max-width: 20vh;
 	max-height: 20vh;
 	box-shadow: $lightdrop;
+	margin: 2vh;
 }
 
 div.side-container {
     border-radius: 20px;
-	overflow: hidden;
 	background-color: theme-color('secondary');
 	position: absolute;
 	top: -3vh;
 	left: 3vh;
 	bottom: 3vh;
+	max-width: $left-margin;
 }
 
 .drop-container {
 	box-shadow: $harddrop;
 }
 
+.drop-container-content {
+	padding-left: 1vh;
+}
+
 div.side-wrapper{
+
 }

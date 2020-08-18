@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'LFcurriculum';
+  sideItems: Map<string, string> = new Map([
+    [ ':classical_building: Universita\'', 'Universita degli studi di Parma.']
+  ]);
 }

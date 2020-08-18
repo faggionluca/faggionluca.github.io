@@ -10,13 +10,15 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { ProjectContainerComponent } from './project-container/project-container.component';
 import { MarkdownModule } from 'ngx-markdown';
 import { SecurityContext } from '@angular/core';
+import { SideExpertiseListComponent } from './side-expertise-list/side-expertise-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CrbadgeComponent,
     SidebarComponent,
-    ProjectContainerComponent
+    ProjectContainerComponent,
+    SideExpertiseListComponent
   ],
   imports: [
     FlexLayoutModule,
