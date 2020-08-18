@@ -6,6 +6,7 @@
 
 * {
 	font-family: "Open Sans";
+	color: $text-on-secondary;
 }
 
 h1,
@@ -35,4 +36,9 @@ h6{
 body {
 	background-color: theme-color('dark');
 	padding: 2vh 10vh;
+	height: 100%;
+}
+
+html {
+	height: 100%;
 }
