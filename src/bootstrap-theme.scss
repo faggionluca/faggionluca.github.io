@@ -28,16 +28,19 @@ $gray-900: #212529;
 $black: #000;
 
 // custom palette
-$primary: #F6F4F6;
-$secondary: #64A6F0;
-$dark-bg: #eee;
-$light: #A9A3B7;
+$primary: #9DB4C0;
+$secondary: #253237;
+$dark: #5C6B73;
+$light: #E0FBFC;
 
 $grays: (100: $gray-100, 200: $gray-200, 300: $gray-300, 400: $gray-400, 500: $gray-500, 600: $gray-600, 700: $gray-700, 800: $gray-800, 900: $gray-900);
-$theme-colors: (primary: $primary, secondary: $secondary, success: $green, info: $cyan, warning: $yellow, danger: $red, light: $light, dark: $dark-bg);
+$theme-colors: (primary: $primary, secondary: $secondary, success: $green, info: $cyan, warning: $yellow, danger: $red, light: $light, dark: $dark);
 $colors: (blue: $blue, indigo: $indigo, purple: $purple, pink: $pink, red: $red, orange: $orange, yellow: $yellow, green: $green, teal: $teal, cyan: $cyan, white: $white, gray: $gray-600,gray-dark: $gray-800);
 $theme-color-interval: 8%;
 
+//text
+$text-on-primary: gray(900);
+$text-on-secondary: gray(100);
 
 // Spacing
 $spacer: 1rem;
