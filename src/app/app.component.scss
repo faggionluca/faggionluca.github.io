@@ -1,0 +1,31 @@
+@import '../bootstrap-theme.scss';
+
+$left-margin: 300px;
+
+app-crbadge {
+	padding-left: $left-margin;
+}
+
+.main-layout {
+	margin-top: 3vh;
+}
+
+.project-layout {
+	margin-left: $left-margin;
+}
+
+.drop-container {
+	background-color: theme-color('light');
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-left: $left-margin;
+	letter-spacing: -1px;
+	font-weight: 500;
+	margin-bottom: 0 !important;
+}
