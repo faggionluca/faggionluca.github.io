@@ -1,0 +1,25 @@
+@import '../../bootstrap-theme.scss';
+@import '../../variables.scss';
+
+img {
+	border-radius: 50%;
+	max-width: 20vh;
+	max-height: 20vh;
+}
+
+div.side-container {
+    border-radius: 20px;
+	overflow: hidden;
+	background-color: theme-color('secondary');
+	position: absolute;
+	top: -3vh;
+	left: 3vh;
+	min-height: 700px;
+}
+
+.drop-container {
+	box-shadow: $harddrop;
+}
+
+div.side-wrapper{
+}
