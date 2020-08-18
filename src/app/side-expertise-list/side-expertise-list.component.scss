@@ -1,0 +1,24 @@
+@import '../../bootstrap-theme.scss';
+@import '../../variables.scss';
+
+
+.side-expertise-container {
+	position: relative;
+}
+
+.side-expertise-type {
+	position: absolute;
+	top: -1vh;
+	left: -2vh;
+	background-color: theme-color('primary');
+	color: $text-on-primary;
+	padding: 10px 20px;
+}
+
+.side-expertise-wrapper{
+	padding-top: 4vh;
+}
+
+.side-expertise-type ::ng-deep p {
+	margin: 0;
+}
