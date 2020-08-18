@@ -1,5 +1,27 @@
 @import '../../bootstrap-theme.scss';
+@import '../../variables.scss';
 
 * {
 	color: $text-on-primary;
+}
+
+div[fxLayout=column] div:first-child {
+	text-shadow: $hardtextdrop;
+	color: $text-on-primary;
+	font-size: small;
+	font-weight: 600;
+}
+
+div[fxLayout=column] div:not(:first-child) {
+	padding-left: 2vh;
+	border-bottom: 1px solid theme-color('primary');
+}
+
+div[fxlayout=column] {
+	flex-grow: 1;
+    flex-basis: 0;
+}
+
+.break-row {
+	height: 1vh;
 }

@@ -1,5 +1,9 @@
-<div fxLayout="row" class="drop-container-content badge-wrapper">
-  <div>
-    Content
-  </div>
+<div fxLayout="row wrap" fxLayoutGap="5%" fx class="drop-container-content badge-wrapper">
+  <ng-container *ngFor="let detail of personalDetails | keyvalue: originalOrder; let i=index" >
+    <div fxLayout="column" class="w-100">
+      <div>{{detail.key}}</div>
+      <div>{{detail.value}}</div>
+    </div>
+    <div *ngIf="(i+1)%2 === 0" class="break-row"></div>
+  </ng-container>
 </div>
