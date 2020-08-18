@@ -22,7 +22,24 @@ $lightdrop: 0 1.1px 0.6px rgba(255, 255, 255, 0.012),
 			0 8.2px 11.1px rgba(255, 255, 255, 0.049),
 			0 20px 24px rgba(255, 255, 255, 0.07);
 
+$lighttextdrop: 0 0.8px 1.5px rgba(0, 0, 0, 0.068), 
+				0 1.9px 3.7px rgba(0, 0, 0, 0.081), 
+				0 3.6px 7px rgba(0, 0, 0, 0.088), 
+				0 6.5px 12.5px rgba(0, 0, 0, 0.096), 
+				0 12.1px 23.4px rgba(0, 0, 0, 0.107), 
+				0 29px 56px rgba(0, 0, 0, 0.12);
+
+$hardtextdrop:  0 0.1px 0.2px rgba(0, 0, 0, 0.076),
+				0 0.3px 0.6px rgba(0, 0, 0, 0.109),
+				0 0.8px 1.1px rgba(0, 0, 0, 0.135),
+				0 1.4px 2px rgba(0, 0, 0, 0.161),
+				0 2.5px 3.8px rgba(0, 0, 0, 0.194),
+				0 4px 9px rgba(0, 0, 0, 0.27);
+
+
+
+
 
 $left-margin: 300px;
 
-$content-margin: $left-margin + 20px;
+$content-margin: $left-margin + 80px;
