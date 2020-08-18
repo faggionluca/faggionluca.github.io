@@ -1,6 +1,11 @@
 @import '../bootstrap-theme.scss';
+@import '../variables.scss';
 
 $left-margin: 300px;
+
+:host {
+	height: 100%;
+}
 
 app-crbadge {
 	padding-left: $left-margin;
@@ -16,6 +21,12 @@ app-crbadge {
 
 .drop-container {
 	background-color: theme-color('light');
+	box-shadow: $harddrop;
+}
+
+.content-wrapper {
+	position: relative;
+	height: 100%;
 }
 
 h1,

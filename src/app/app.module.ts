@@ -8,6 +8,8 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ProjectContainerComponent } from './project-container/project-container.component';
+import { MarkdownModule } from 'ngx-markdown';
+import { SecurityContext } from '@angular/core';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,9 @@ import { ProjectContainerComponent } from './project-container/project-container
   ],
   imports: [
     FlexLayoutModule,
+    MarkdownModule.forRoot({
+      sanitize: SecurityContext.NONE
+    }),
     BrowserModule,
     AppRoutingModule,
     NgbModule
