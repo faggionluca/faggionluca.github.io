@@ -1,6 +1,11 @@
 import { Component } from '@angular/core';
 import { faGithub, faArtstation, IconDefinition } from '@fortawesome/free-brands-svg-icons';
 import { SocialLink } from './socials/socials.component';
+import { KeyValue } from '@angular/common';
+
+export const originalOrder = (a: KeyValue<number, string>, b: KeyValue<number, string>): number => {
+  return 0;
+};
 
 @Component({
   selector: 'app-root',
@@ -9,7 +14,7 @@ import { SocialLink } from './socials/socials.component';
 })
 export class AppComponent {
   title = 'Resume';
-  
+
   sideItems: Map<string, string> = new Map([
     [':classical_building: Universita\'',
       'Universita degli studi di Parma.'],
@@ -19,6 +24,9 @@ export class AppComponent {
 
     [':mortar_board: Corso',
       'Laurea in Ingegneria Informatica, Elettronica e delle Telecomunicazioni (LIET)'],
+
+    [':joystick: Hobbies',
+      'Realtime Graphics, 3D Modelling e Automation Scripts'],
   ]);
 
   personalDetails: Map<string, string> = new Map([
@@ -35,4 +43,5 @@ export class AppComponent {
     [faGithub, {social: 'Github Profile', link: 'https://github.com/darkimage'}],
     [faArtstation, {social: 'Artstation Profile', link: 'https://www.artstation.com/darkimage'}]
   ]);
+
 }

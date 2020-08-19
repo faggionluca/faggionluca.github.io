@@ -46,3 +46,8 @@ h6 {
 	border-top: 1px solid darken(theme_color('dark'), 4);
 	text-align: end;
 }
+
+.footer-wrapper a {
+	color: lighten($text-on-primary, 50);
+	text-decoration: underline;
+}
