@@ -10,7 +10,7 @@ export class CrbadgeComponent implements OnInit {
 
   @Input() personalDetails: Map<string, string>;
 
-  originalOrder = (a: KeyValue<number,string>, b: KeyValue<number,string>): number => {
+  originalOrder = (a: KeyValue<number, string>, b: KeyValue<number, string>): number => {
     return 0;
   }
   constructor() { }

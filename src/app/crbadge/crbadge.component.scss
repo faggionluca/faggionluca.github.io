@@ -5,7 +5,7 @@
 	color: $text-on-primary;
 }
 
-div[fxLayout=column] div:first-child {
+div[fxLayout=column] div:first-child ::ng-deep p {
 	text-shadow: $hardtextdrop;
 	color: $text-on-primary;
 	font-size: small;
@@ -19,9 +19,18 @@ div[fxLayout=column] div:not(:first-child) {
 
 div[fxlayout=column] {
 	flex-grow: 1;
-    flex-basis: 0;
+	flex-basis: 0;
+}
+
+div[fxlayout=column] ::ng-deep p {
+	margin: 0;
+}
+
+div[fxlayout=column] div::ng-deep *:not(a) {
+	margin: 0;
+	color: $text-on-primary;
 }
 
 .break-row {
 	height: 1vh;
-}
+} 
