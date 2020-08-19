@@ -29,3 +29,12 @@ div.social-icon-wrapper div.drop-container {
 	margin-bottom: 0.5em;
 	padding: 0.3em;
 }
+
+.drop-container {
+	border-top-right-radius: 25px;
+	border-bottom-right-radius: 5px;
+}
+
+.social-icon-wrapper .drop-container:not(:first-child)  {
+	border-top-right-radius: 5px;
+}
