@@ -1,14 +1,18 @@
 <div class="content-wrapper">
-<div fxLayout="column" fxLayoutGap="32px" class="main-layout">
-  <div fxLayout="row" class="drop-container">
-    <app-crbadge class="w-100" [personalDetails]="personalDetails"></app-crbadge>
+  <div fxLayout="column" fxLayoutGap="32px" class="main-layout">
+    <div fxLayout="row" class="drop-container">
+      <app-crbadge class="w-100" [personalDetails]="personalDetails"></app-crbadge>
+      <app-socials [socialIcons]="socialList"></app-socials>
+    </div>
+    <h1>Progetti Universitari</h1>
+    <hr class="w-100">
+    <div fxLayout="column" fxLayoutGap="32px" class="project-layout">
+      <app-project-container></app-project-container>
+    </div>
   </div>
-  <h1>Progetti Universitari</h1>
-  <hr class="w-100">
-  <div fxLayout="column" fxLayoutGap="32px" class="project-layout">
-    <app-project-container></app-project-container>
+  <app-sidebar [sidelist]="sideItems"></app-sidebar>
+  <router-outlet></router-outlet>
+  <div class="footer-wrapper">
+    Curriculum Web Creato con Angular 10, Copyright 2020 Luca Faggion.
   </div>
-</div>
-<app-sidebar [sidelist]="sideItems"></app-sidebar>
-<router-outlet></router-outlet>
 </div>

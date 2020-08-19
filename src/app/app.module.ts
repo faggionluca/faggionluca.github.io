@@ -11,6 +11,8 @@ import { ProjectContainerComponent } from './project-container/project-container
 import { MarkdownModule } from 'ngx-markdown';
 import { SecurityContext } from '@angular/core';
 import { SideExpertiseListComponent } from './side-expertise-list/side-expertise-list.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SocialsComponent } from './socials/socials.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { SideExpertiseListComponent } from './side-expertise-list/side-expertise
     CrbadgeComponent,
     SidebarComponent,
     ProjectContainerComponent,
-    SideExpertiseListComponent
+    SideExpertiseListComponent,
+    SocialsComponent
   ],
   imports: [
     FlexLayoutModule,
@@ -27,7 +30,8 @@ import { SideExpertiseListComponent } from './side-expertise-list/side-expertise
     }),
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

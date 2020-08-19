@@ -11,6 +11,7 @@ app-crbadge {
 
 .main-layout {
 	margin-top: 3vh;
+	height: 100%;
 }
 
 .project-layout {
@@ -37,4 +38,11 @@ h6 {
 	letter-spacing: -1px;
 	font-weight: 500;
 	margin-bottom: 0 !important;
+}
+
+.footer-wrapper {
+	font-size: small;
+	color: $text-on-primary;
+	border-top: 1px solid darken(theme_color('dark'), 4);
+	text-align: end;
 }
