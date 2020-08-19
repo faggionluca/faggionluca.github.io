@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class SidebarComponent implements OnInit {
 
   @Input() sidelist: Map<string, string>;
+  @Input() sideTitle: string;
 
   constructor() { }
 
