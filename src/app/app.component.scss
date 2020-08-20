@@ -20,7 +20,8 @@ app-crbadge {
 
 .drop-container {
 	background-color: theme-color('light');
-	box-shadow: $harddrop;
+	// box-shadow: $harddrop;
+	-webkit-filter: $harddropwebkit;
 }
 
 .content-wrapper {

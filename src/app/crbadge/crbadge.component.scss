@@ -6,7 +6,8 @@
 }
 
 div[fxLayout=column] div:first-child ::ng-deep p {
-	text-shadow: $hardtextdrop;
+	// text-shadow: $hardtextdrop;
+	-webkit-filter: $hardtextdropwebkit;
 	color: $text-on-primary;
 	font-size: small;
 	font-weight: 600;

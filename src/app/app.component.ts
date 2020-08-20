@@ -43,5 +43,4 @@ export class AppComponent {
     [faGithub, {social: 'Github Profile', link: 'https://github.com/darkimage'}],
     [faArtstation, {social: 'Artstation Profile', link: 'https://www.artstation.com/darkimage'}]
   ]);
-
 }

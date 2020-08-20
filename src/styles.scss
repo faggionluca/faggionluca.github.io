@@ -4,6 +4,14 @@
 @import 'font-roboto.css';
 @import 'bootstrap-theme.scss';
 
+
+@media print {
+	@page { 
+	  size: 1920px 1280px;
+	  margin: 0mm; // added mm
+	}
+  }
+
 * {
 	font-family: "Open Sans";
 	color: $text-on-secondary;
@@ -19,10 +27,12 @@ h6{
 }
 
 .drop-container {
-	box-shadow: $softdrop;
+	//box-shadow: $softdrop;
 	border-radius: 6px;
 	background-color: theme-color('primary');
 	position: relative;
+	-webkit-filter: $softdropwebkit;
+	// -webkit-print-color-adjust:exact; 
 }
 
 .drop-container * {

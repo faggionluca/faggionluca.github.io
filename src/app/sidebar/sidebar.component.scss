@@ -5,7 +5,8 @@ img {
 	border-radius: 50%;
 	max-width: 20vh;
 	max-height: 20vh;
-	box-shadow: $lightdrop;
+	// box-shadow: $lightdrop;
+	-webkit-filter: $lightdropwebkit;
 	margin: 2vh;
 }
 
@@ -15,9 +16,11 @@ img {
     left: 2vh;
     color: $text-on-secondary;
     font-weight: 600;
-    box-shadow: 3px solid;
-    text-shadow: $lighttextdrop;
-    font-size: 40px;
+    // box-shadow: 3px solid;
+	// text-shadow: $lighttextdrop;
+	-webkit-filter: $lighttextdropwebkit;
+	font-size: 40px;
+	z-index: 10;
 }
 
 
@@ -32,7 +35,8 @@ div.side-container {
 }
 
 .drop-container {
-	box-shadow: $harddrop;
+	// box-shadow: $harddrop;
+	-webkit-filter: $harddropwebkit;
 }
 
 .drop-container-content {
