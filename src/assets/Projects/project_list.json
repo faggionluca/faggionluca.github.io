@@ -1,0 +1,13 @@
+{ 
+	"categories": [
+		{
+			"category": "Progetti Universitari",
+			"list":[
+				{
+					"name": "Basi di Dati e Web", 
+					"file": "../../assets/Projects/Basi_di_Dati.md", 
+					"repo": "https://github.com/darkimage/Universita-Basididati"
+				}]
+		}
+	]
+}
