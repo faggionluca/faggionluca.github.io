@@ -1,0 +1,1 @@
+chrome --headless --disable-gpu --print-to-pdf="%CD%\pdf\out.pdf" http://localhost:4200/

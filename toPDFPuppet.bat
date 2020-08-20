@@ -1,0 +1,1 @@
+node pupeteer.js http://localhost:4200/ pdf/out-puppet.pdf 1920px 1920px
