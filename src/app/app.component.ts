@@ -2,10 +2,22 @@ import { Component } from '@angular/core';
 import { faGithub, faArtstation, IconDefinition } from '@fortawesome/free-brands-svg-icons';
 import { SocialLink } from './socials/socials.component';
 import { KeyValue } from '@angular/common';
+import * as projects from '../assets/Projects/project_list.json';
 
 export const originalOrder = (a: KeyValue<number, string>, b: KeyValue<number, string>): number => {
   return 0;
 };
+
+export interface project {
+  name: string;
+  file: string;
+  repo: string;
+}
+
+export interface projectCategory {
+  category: string;
+  list: Array<project>;
+}
 
 @Component({
   selector: 'app-root',
@@ -43,4 +55,9 @@ export class AppComponent {
     [faGithub, {social: 'Github Profile', link: 'https://github.com/darkimage'}],
     [faArtstation, {social: 'Artstation Profile', link: 'https://www.artstation.com/darkimage'}]
   ]);
+
+  projectList: Array<projectCategory> = projects.categories;
+
+  constructor() {}
+
 }

@@ -18,6 +18,10 @@ app-crbadge {
 	margin-left: $content-margin;
 }
 
+.project-layout hr {
+	margin-left: -$content-margin / 2;
+}
+
 .drop-container {
 	background-color: theme-color('light');
 	// box-shadow: $harddrop;
@@ -35,7 +39,7 @@ h3,
 h4,
 h5,
 h6 {
-	margin-left: $content-margin;
+	// margin-left: $content-margin;
 	letter-spacing: -1px;
 	font-weight: 500;
 	margin-bottom: 0 !important;

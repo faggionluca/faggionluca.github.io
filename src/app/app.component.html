@@ -4,10 +4,14 @@
       <app-crbadge class="w-100" [personalDetails]="personalDetails"></app-crbadge>
       <app-socials [socialIcons]="socialList"></app-socials>
     </div>
-    <h1>Progetti Universitari</h1>
-    <hr class="w-100">
     <div fxLayout="column" fxLayoutGap="32px" class="project-layout">
-      <app-project-container></app-project-container>
+    <ng-container *ngFor="let cat of projectList" >
+      <h1>{{cat.category}}</h1>
+      <hr class="w-100">
+      <ng-container *ngFor="let proj of cat.list" >
+        <app-project-container [project]="proj"></app-project-container>
+      </ng-container>
+    </ng-container>
     </div>
   </div>
   <app-sidebar [sidelist]="sideItems" [sideTitle]="title"></app-sidebar>
