@@ -13,6 +13,7 @@ import { SecurityContext } from '@angular/core';
 import { SideExpertiseListComponent } from './side-expertise-list/side-expertise-list.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SocialsComponent } from './socials/socials.component';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,12 +22,14 @@ import { SocialsComponent } from './socials/socials.component';
     SidebarComponent,
     ProjectContainerComponent,
     SideExpertiseListComponent,
-    SocialsComponent
+    SocialsComponent,
   ],
   imports: [
     FlexLayoutModule,
+    HttpClientModule,
     MarkdownModule.forRoot({
-      sanitize: SecurityContext.NONE
+      sanitize: SecurityContext.NONE,
+      loader: HttpClient
     }),
     BrowserModule,
     AppRoutingModule,
