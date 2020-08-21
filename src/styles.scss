@@ -17,6 +17,15 @@
 	color: $text-on-secondary;
 }
 
+.vl {
+	margin: 0 !important;
+    padding: 0 !important;
+    border-left: 1px solid rgba(0, 0, 0, 0.1) !important;
+	min-height: 25px;
+	align-self: stretch;
+	height: unset !important;
+}
+
 h1,
 h2,
 h3,
