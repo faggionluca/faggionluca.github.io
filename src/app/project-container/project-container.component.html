@@ -5,4 +5,17 @@
 	<div class="project-wrapper">
 		<markdown [src]="project.file"  ngPreserveWhitespaces emoji></markdown>
 	</div>
+	<hr class="w-100">
+	<div class="project-footer" fxLayout="row" fxLayoutAlign="center center">
+		<div class="project-footer-item w-100">
+			<a href="{{project.repo}}"><fa-icon [icon]="github" size="lg"></fa-icon>Github Repository </a>
+		</div>
+		<ng-container *ngIf="project.report !== ''">
+			<hr class="vl"/>
+			<div class="project-footer-item w-100">
+				<a href="{{project.report}}">
+					<fa-icon [icon]="pdf" size="lg"></fa-icon>Relazione in PDF</a>
+			</div>
+		</ng-container> 
+	</div>
 </div>

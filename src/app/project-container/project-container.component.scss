@@ -24,6 +24,31 @@
 	margin-left: 20px;
 }
 
-.project-wrapper ::ng-deep * {
+.project-container > hr {
+	margin-bottom: 0;
+}
+
+.project-wrapper ::ng-deep *:not(a) {
 	color: $text-on-primary;
+}
+
+.project-wrapper ::ng-deep a {
+	text-decoration: underline;
+}
+
+.project-footer  > *{
+	text-align: center;
+}
+
+.project-footer * {
+	color: $text-on-secondary;
+}
+
+.project-footer-item {
+	padding-bottom: 1vh;
+	padding-top: 1.5vh;
+}
+
+.project-footer-item * {
+	padding: 0.25em;
 }

@@ -2,7 +2,7 @@
 @import '../variables.scss';
 
 :host {
-	height: 100%;
+	min-height: 100%;
 }
 
 app-crbadge {
@@ -11,7 +11,7 @@ app-crbadge {
 
 .main-layout {
 	margin-top: 3vh;
-	height: 100%;
+	min-height: 100%;
 }
 
 .project-layout {
@@ -30,7 +30,7 @@ app-crbadge {
 
 .content-wrapper {
 	position: relative;
-	height: 100%;
+	min-height: 100%;
 }
 
 h1,
@@ -50,6 +50,7 @@ h6 {
 	color: $text-on-primary;
 	border-top: 1px solid darken(theme_color('dark'), 4);
 	text-align: end;
+	margin-top: 2vh;
 }
 
 .footer-wrapper a {

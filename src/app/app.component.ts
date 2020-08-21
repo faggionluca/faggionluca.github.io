@@ -12,6 +12,7 @@ export interface project {
   name: string;
   file: string;
   repo: string;
+  report: string;
 }
 
 export interface projectCategory {
