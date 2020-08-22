@@ -7,6 +7,12 @@
 	}
 }
 
+@include media-breakpoint-down(sm){
+	div.project-container{
+		padding-top: 12vh;
+	}
+}
+
 .project-container {
 	padding-top: 5vh;
 	min-height: 10vh;

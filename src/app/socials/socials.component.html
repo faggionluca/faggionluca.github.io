@@ -1,4 +1,4 @@
-<div fxLayout="column" class="social-icon-wrapper">
+<div fxLayout="column" fxLayoutAlign="start" class="social-icon-wrapper">
 	<div class="drop-container" *ngFor="let icon of socialIcons | keyvalue" >
 		<div fxLayout="column" fxLayoutAlign="center center" class="social-icon">
 			<fa-icon [icon]="icon.key"></fa-icon>

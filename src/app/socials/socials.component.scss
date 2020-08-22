@@ -1,6 +1,22 @@
 @import '../../variables.scss';
 @import '../../bootstrap-theme.scss';
 
+@include media-breakpoint-down(md){
+	div.social-icon-wrapper {
+		position: unset;
+		place-content: center center !important;
+		flex-direction: row !important;
+	}
+
+	div.drop-container {
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+		width: 100%;
+		margin-left: 1vh;
+		margin-right: 1vh;
+	}
+}
+
 .social-icon-wrapper {
 	position: absolute;
 	right: -5vh;

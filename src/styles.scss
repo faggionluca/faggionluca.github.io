@@ -18,7 +18,7 @@
 	color: $text-on-secondary;
 }
 
-@include media-breakpoint-down(md){
+@include media-breakpoint-down(lg){
 	html body {
 		padding: 2vh 5.5vh 2vh 3vh;
 	}
