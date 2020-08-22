@@ -24,7 +24,16 @@ img {
 }
 
 
-div.side-container {
+@include media-breakpoint-down(md){
+
+	div.side-container {
+		position: unset;
+		max-width: unset;
+	}
+
+}
+
+.side-container {
     border-radius: 20px;
 	background-color: theme-color('secondary');
 	position: absolute;

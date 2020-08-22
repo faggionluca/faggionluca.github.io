@@ -1,6 +1,12 @@
 @import '../../bootstrap-theme.scss';
 @import '../../variables.scss';
 
+@include media-breakpoint-down(md){
+	div.side-expertise-wrapper{
+		padding-top: 6vh;
+	}
+}
+
 .side-expertise-container {
 	position: relative;
 	margin-bottom: 2em;

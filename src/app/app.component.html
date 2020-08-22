@@ -1,5 +1,6 @@
 <div class="content-wrapper">
   <div fxLayout="column" fxLayoutGap="32px" class="main-layout">
+    <app-sidebar [sidelist]="sideItems" [sideTitle]="title"></app-sidebar>
     <div fxLayout="row" class="drop-container">
       <app-crbadge class="w-100" [personalDetails]="personalDetails"></app-crbadge>
       <app-socials [socialIcons]="socialList"></app-socials>
@@ -14,7 +15,6 @@
     </ng-container>
     </div>
   </div>
-  <app-sidebar [sidelist]="sideItems" [sideTitle]="title"></app-sidebar>
   <router-outlet></router-outlet>
   <div class="footer-wrapper">
     Curriculum Web Creato con <a href="https://angular.io/">Angular 10</a>, Copyright 2020 <a href="https://github.com/darkimage">Luca Faggion</a>.

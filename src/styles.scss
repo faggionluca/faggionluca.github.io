@@ -7,14 +7,21 @@
 
 @media print {
 	@page { 
-	  size: 1920px 1280px;
-	  margin: 0mm; // added mm
+		size: 1920px 1280px;
+		margin: 0mm; // added mm
 	}
-  }
+}
+
 
 * {
 	font-family: "Open Sans";
 	color: $text-on-secondary;
+}
+
+@include media-breakpoint-down(md){
+	html body {
+		padding: 2vh 5.5vh 2vh 3vh;
+	}
 }
 
 .vl {

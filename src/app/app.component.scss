@@ -5,14 +5,39 @@
 	min-height: 100%;
 }
 
+@include media-breakpoint-down(md){
+
+	div.project-layout {
+		margin-left: unset;
+	}
+
+	div app-crbadge {
+		padding-left: unset;
+	}
+}
+
+@include media-breakpoint-up(lg){
+
+	div app-sidebar { 
+		margin-bottom: unset !important;
+	}
+
+}
+
 app-crbadge {
 	padding-left: $content-margin;
+}
+
+app-sidebar {
+	z-index: 10;
 }
 
 .main-layout {
 	margin-top: 3vh;
 	min-height: 100%;
 }
+
+// $grid-breakpoints
 
 .project-layout {
 	margin-left: $content-margin;

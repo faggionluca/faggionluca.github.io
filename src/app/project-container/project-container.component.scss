@@ -1,6 +1,12 @@
 @import '../../bootstrap-theme.scss';
 @import '../../variables.scss';
 
+@include media-breakpoint-down(md){
+	div.project-container{
+		padding-top: 8vh;
+	}
+}
+
 .project-container {
 	padding-top: 5vh;
 	min-height: 10vh;
