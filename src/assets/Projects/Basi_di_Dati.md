@@ -1,5 +1,5 @@
 [![repo](https://img.shields.io/badge/repo-Github-blue)](https://github.com/darkimage/Universita-Basididati)
-[![language](https://img.shields.io/badge/main_language-PHP-gree)](https://www.php.net/)
+[![language](https://img.shields.io/badge/main_language-PHP-green)](https://www.php.net/)
 [![relazione](https://img.shields.io/badge/relazione-PDF-orange)](https://github.com/darkimage/Universita-Basididati/raw/master/documents/basi_di_dati.pdf)
 
 
