@@ -20,6 +20,12 @@
 					"file": "../../assets/Projects/Mobdev_Android.md", 
 					"repo": "https://github.com/darkimage/Universita-android-ChronotrackerApp",
 					"report": "https://github.com/darkimage/Universita-android-ChronotrackerApp/raw/master/documents/relazione_android.pdf"
+				},
+				{
+					"name": "Programmazione Sistemi Mobili - IOS", 
+					"file": "../../assets/Projects/Mobdev_IOS.md", 
+					"repo": "https://github.com/darkimage/Universita-ios-weatherApp",
+					"report": "https://github.com/darkimage/Universita-ios-weatherApp/raw/master/Documents/relazione_ios.pdf"
 				}]
 		}
 	]

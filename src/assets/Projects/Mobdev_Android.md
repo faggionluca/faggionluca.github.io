@@ -17,3 +17,5 @@ I principali sono:
 - Utilizzo di **Query asincrone** per la richiesta/ricezione dei dati dal Model
 	> E' stato creato un sistema ADHOC per tale scopo che utilizza una classe anche essa creata per tale esigenza, [NoLeakAsyncTask](https://github.com/darkimage/Universita-android-ChronotrackerApp#classe-noleakasynctask)
 - Utilizzo di comunicazione tra Controllers tramite **[Observables (LiveData)](https://developer.android.com/topic/libraries/architecture/livedata)**
+
+l'applicazione realizza una app per il tracciamento e cronometraggio di atleti, mette a disposizione interfaccie per i profili degli altleti e la loro history delle prove cronometrate.
