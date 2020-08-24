@@ -33,7 +33,7 @@ export class AppComponent {
       'Universita degli studi di Parma.'],
 
     [':keyboard: Principali linguaggi',
-      'C++, Python, Typescript, Java'],
+      'C++, Python, Typescript/JS, Java'],
 
     [':mortar_board: Corso',
       'Laurea in Ingegneria Informatica, Elettronica e delle Telecomunicazioni (LIET)'],
