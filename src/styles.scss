@@ -73,3 +73,26 @@ html {
 	flex-basis: 100%;
 	height: 0;
 }
+
+
+// Scrollbar styling (WEBKIT)
+
+$scrollbar_color: rgba(theme-color('light'), 0.2);
+
+*::-webkit-scrollbar {
+	width: 8px;
+}
+
+* {
+	scrollbar-width: thin;
+	scrollbar-color: $scrollbar_color transparent;
+}
+
+*::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: $scrollbar_color;
+	border-radius: 6px;
+}
