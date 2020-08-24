@@ -5,6 +5,11 @@
 	div.project-container{
 		padding-top: 8vh;
 	}
+
+	div.project-wrapper{
+		margin-left: 0;
+		padding: 0.5em;
+	}
 }
 
 @include media-breakpoint-down(sm){
@@ -46,7 +51,7 @@
 
 .project-wrapper ::ng-deep blockquote {
 	color: $text-on-primary;
-	border-left: 1px solid rgba(0,0,0,0.1);
+	border-left: 4px solid rgba(0,0,0,0.1);
 	padding-left: 1em;
 	padding-top: 0.5em;
 }

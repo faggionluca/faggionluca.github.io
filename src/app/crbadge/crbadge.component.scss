@@ -9,6 +9,19 @@
 	div div[fxLayout=column] div:not(:first-child) {
 		padding-left: unset;
 	}
+
+	div.badge-wrapper {
+		flex-flow: column wrap !important;
+	}
+
+	div.badge-wrapper > * {
+		padding-bottom: 1em;
+	}
+
+	div.badge-wrapper > div.break-row {
+		height: 0;
+		padding: 0;
+	}
 }
 
 
