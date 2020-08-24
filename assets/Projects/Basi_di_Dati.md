@@ -1,5 +1,5 @@
 [![repo](https://img.shields.io/badge/repo-Github-blue)](https://github.com/darkimage/Universita-Basididati)
-[![language](https://img.shields.io/badge/main_language-PHP-gree)](https://www.php.net/)
+[![language](https://img.shields.io/badge/main_language-PHP-green)](https://www.php.net/)
 [![relazione](https://img.shields.io/badge/relazione-PDF-orange)](https://github.com/darkimage/Universita-Basididati/raw/master/documents/basi_di_dati.pdf)
 
 
@@ -13,7 +13,7 @@ Sono stati creati **tre principali sistemi cooperanti** per gestire queste neces
 
  - Utilizzo del **Pattern MVC** (Model-View-Controller)
  - Creazione di un **Custom Templating Engine** (Templating Classes)
-	> Utilizzato per effetuare una composizione modulare di template HTML, rendendo piu efficente la realizzazione del progetto sfruttando il riutilizzo del codice. Il sistema e un **preprocessor** per HTML, effettivamente virualizzando il DOM Tree rendendolo programmaticalmente disponibile in codice PHP
+	> Utilizzato per effetuare una composizione modulare di template HTML, rendendo piu efficente la realizzazione del progetto sfruttando il riutilizzo del codice. Il sistema e' un **preprocessor** per HTML, effettivamente virualizzando il DOM Tree rendendolo programmaticalmente disponibile in codice PHP
 
 	> [Per maggiori info sul sistema](https://github.com/darkimage/Universita-Basididati#custom-templating-engine) 
  - Creazione di **Domain Classes** per l'astrazione del DB

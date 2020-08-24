@@ -8,6 +8,18 @@
 					"file": "../../assets/Projects/Basi_di_Dati.md", 
 					"repo": "https://github.com/darkimage/Universita-Basididati",
 					"report": "https://github.com/darkimage/Universita-Basididati/raw/master/documents/basi_di_dati.pdf"
+				},
+				{
+					"name": "Ingegneria del Software", 
+					"file": "../../assets/Projects/Ingegneria_del_Software.md", 
+					"repo": "https://github.com/darkimage/Universita-IngegneriaDelSoftware",
+					"report": "https://github.com/darkimage/Universita-IngegneriaDelSoftware/raw/master/documents/SistemadiVenditaOnline_LucaFaggion_274857.pdf"
+				},
+				{
+					"name": "Programmazione Sistemi Mobili - Android", 
+					"file": "../../assets/Projects/Mobdev_Android.md", 
+					"repo": "https://github.com/darkimage/Universita-android-ChronotrackerApp",
+					"report": "https://github.com/darkimage/Universita-android-ChronotrackerApp/raw/master/documents/relazione_android.pdf"
 				}]
 		}
 	]
