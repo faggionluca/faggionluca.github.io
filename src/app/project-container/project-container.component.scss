@@ -44,6 +44,14 @@
 	color: $text-on-primary;
 }
 
+.project-wrapper ::ng-deep blockquote {
+	color: $text-on-primary;
+	border-left: 1px solid rgba(0,0,0,0.1);
+	padding-left: 1em;
+	padding-top: 0.5em;
+}
+
+
 .project-wrapper ::ng-deep a {
 	text-decoration: underline;
 }
