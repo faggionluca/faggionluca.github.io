@@ -3,6 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import Typography from 'typography'
+import twinPeaksTheme from 'typography-theme-twin-peaks'
+import injectFonts from 'typography-inject-fonts'
+
+const typography = new Typography(twinPeaksTheme);
+
+typography.injectStyles();
+injectFonts(typography);
 
 ReactDOM.render(
   <React.StrictMode>
