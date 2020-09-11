@@ -13,8 +13,9 @@ export function withAnimated(StyledComponent, animateClass) {
       }
     }
   }
-  return (props) => {
-    return (<StyledComponent {...props} className={`${ (classes.length !== 0) ? "animate__animated" : ""} ${classes.join(" ")}`}/>)
+	return (props) => {
+		const { className, ...rest } = props;
+    return (<StyledComponent {...rest} className={`${className} ${ (classes.length !== 0) ? "animate__animated" : ""} ${classes.join(" ")}`}/>)
   };
 }
 
