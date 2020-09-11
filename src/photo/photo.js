@@ -1,11 +1,26 @@
 import React from 'react';
-import style from './photo.module.css';
+import styled from 'styled-components';
+
+const PhotoContainer = styled.div`
+  position: relative;
+  padding-top: 100%;
+  overflow: hidden;
+  border-radius: 50%;
+`;
+
+const PhotoImg = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  transform: scale(1.15); 
+`;
 
 const Photo = (props) => {
   return (
-    <div className={style.photo}>
-      <img className={style.img} alt="profile" src={props.image}></img>
-    </div>
+    <PhotoContainer>
+      <PhotoImg alt="profile" src={props.image}></PhotoImg>
+    </PhotoContainer>
   );
 };
 
