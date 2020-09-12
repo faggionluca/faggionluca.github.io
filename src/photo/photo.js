@@ -5,7 +5,6 @@ import { withAnimated } from '../global-components';
 const PhotoContainer = styled.div`
   position: relative;
   padding-top: 100%;
-  overflow: hidden;
 `;
 
 const PhotoWrapper = withAnimated(styled.div`
@@ -17,10 +16,21 @@ const PhotoWrapper = withAnimated(styled.div`
   bottom: 0;
   right: 0;
   margin: 0;
-`,{animation: "backInLeft"});
+  border-style: solid;
+  border: none;
+  border-bottom: 0.1rem solid;
+  border-color: ${props => props.theme.borderColor};
+;
+
+`, {
+  inject: true,
+  animationName: "bounceIn",
+  animationDuration: "1s",
+  animationDelay: "0.5s"
+});
 
 const PhotoImg = styled.img`
-  transform: scale(1.15); 
+  transform: scale(1.15);
 `;
 
 const Photo = (props) => {
