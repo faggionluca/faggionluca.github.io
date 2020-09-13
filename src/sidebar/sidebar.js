@@ -2,7 +2,8 @@ import React from 'react';
 import Photo from '../photo';
 import profilePhoto from '../assets/images/photo.jpg';
 import styled from 'styled-components';
-import {Hr, withAnimated} from '../global-components';
+import { Hr } from '../global-components';
+import { withAnimated } from '@darkimage/react-animate-hoc';
 
 const PaddedHr = withAnimated(styled(Hr)`
   margin-top: 0.5rem;

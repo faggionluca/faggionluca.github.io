@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { withAnimated } from '../global-components';
+import { withAnimated } from '@darkimage/react-animate-hoc';
 
 const PhotoContainer = styled.div`
   position: relative;

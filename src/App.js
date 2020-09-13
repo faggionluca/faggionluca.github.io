@@ -1,7 +1,7 @@
 import React from 'react';
 import Sidebar from './sidebar';
 import styled from 'styled-components';
-import { withAnimated, withAnimatedChildren } from './global-components';
+import { withAnimated, withAnimatedGroup } from '@darkimage/react-animate-hoc';
 
 const AppContainer = styled.div`
   display: grid;
@@ -23,7 +23,7 @@ const AppContainer = styled.div`
   }
 `;
 
-const Prova = withAnimatedChildren(function Prova(props) {
+const Prova = withAnimatedGroup(function Prova(props) {
   return <div>{props.children} </div>
 }, {
     delay: 1,
