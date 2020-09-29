@@ -13,7 +13,6 @@ import 'animate.css';
 const typography = new Typography(twinPeaksTheme);
 
 typography.injectStyles();
-injectFonts(typography);
 
 document.documentElement.classList.add('fullPage');
 document.body.classList.add('fullPage');
