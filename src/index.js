@@ -5,7 +5,6 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import Typography from 'typography'
 import twinPeaksTheme from 'typography-theme-twin-peaks'
-import injectFonts from 'typography-inject-fonts'
 import { ThemeProvider } from 'styled-components';
 import { theme } from './global-components';
 import 'animate.css';
