@@ -10,11 +10,11 @@
     "animate.css": "^4.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-helmet": "^6.1.0",
     "react-intersection-observer": "^8.28.4",
     "react-scripts": "3.4.3",
     "styled-components": "^5.2.0",
     "typography": "^0.16.19",
-    "typography-inject-fonts": "0.0.0",
     "typography-theme-twin-peaks": "^0.16.19"
   },
   "scripts": {
