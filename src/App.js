@@ -2,6 +2,7 @@ import React from 'react';
 import Sidebar from './sidebar';
 import styled from 'styled-components';
 import { withAnimated, withAnimatedGroup } from '@darkimage/react-animate-hoc';
+import { Head } from './typography-inject';
 
 const AppContainer = styled.div`
   display: grid;
@@ -40,6 +41,7 @@ const Prova2 = withAnimated(function Prova2(props) {
 function App() {
   return (
     <AppContainer>
+      <Head/>
       <Sidebar />
       <div>
         
