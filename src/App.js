@@ -3,24 +3,21 @@ import Sidebar from './sidebar';
 import styled from 'styled-components';
 import { withAnimated, withAnimatedGroup } from '@darkimage/react-animate-hoc';
 import { Head } from './typography-inject';
+import { breakpoints } from './global-components';
 
 const AppContainer = styled.div`
   display: grid;
-	grid-template-columns: 1fr 8fr;
+  grid-template-columns: 300px 12fr;
 	width: 100%;
 	height: 100%;
   padding: 1rem 2rem;
-  
-  @media only screen and (max-width: 425px){
+
+  @media only screen and (max-width: ${breakpoints.md}){
     display: block;
   }
 
-  @media only screen and (max-width: 768px){
-    grid-template-columns: 1fr 3fr;
-  }
-
-  @media only screen and (min-width: 1440px){
-    grid-template-columns: 1fr 12fr;
+  @media only screen and (max-width: ${breakpoints.xl}){
+    grid-template-columns: 200px 3fr;
   }
 `;
 
