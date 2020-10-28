@@ -2,8 +2,9 @@ import React from 'react';
 import Sidebar from './sidebar';
 import styled from 'styled-components';
 import { withAnimated, withAnimatedGroup } from '@darkimage/react-animate-hoc';
-import { Head } from './typography-inject';
 import { breakpoints } from './global-components';
+import 'argon-design-system-react/src/assets/css/argon-design-system-react.css'
+import { Container, Row, Col, Button } from 'reactstrap';
 
 const AppContainer = styled.div`
   display: grid;
@@ -37,11 +38,30 @@ const Prova2 = withAnimated(function Prova2(props) {
 
 function App() {
   return (
-    <AppContainer>
-      <Head/>
+    <AppContainer className="shadow">
       <Sidebar />
       <div>
-        
+      <Button color="default" type="button">
+          Default
+        </Button>
+        <Button color="primary" type="button">
+          Primary
+        </Button>
+        <Button color="secondary" type="button">
+          Secondary
+        </Button>
+        <Button color="info" type="button">
+          Info
+        </Button>
+        <Button color="success" type="button">
+          Success
+        </Button>
+        <Button color="danger" type="button">
+          Danger
+        </Button>
+        <Button color="warning" type="button">
+          Warning
+        </Button>
       </div>
       <Prova>
         <Prova2>Prova1</Prova2>
