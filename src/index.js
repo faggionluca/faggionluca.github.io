@@ -7,6 +7,7 @@ import Typography from 'typography'
 import twinPeaksTheme from 'typography-theme-twin-peaks'
 import { ThemeProvider } from 'styled-components';
 import { theme } from './global-components';
+import { Head } from './typography-inject';
 import 'animate.css';
 
 const typography = new Typography(twinPeaksTheme);
@@ -21,6 +22,7 @@ ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <App />
+      <Head/>
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root'),
