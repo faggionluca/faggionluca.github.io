@@ -12,14 +12,14 @@ const AppContainerWrapper = styled.div`
   display: grid;
 	width: 100%;
 	height: 100%;
-  padding: 20vh 5vw;
+  padding: 20vh 20vw;
 
   @media only screen and (max-width: ${breakpoints.md}){
-    padding: 10vh 3vw;
+    padding: 10vh 15vw;
   }
 
   @media only screen and (max-width: ${breakpoints.xl}){
-    padding: 15vh 4vw;
+    padding: 15vh 10vw;
   }
 `;
 
@@ -32,6 +32,7 @@ const BgStatic = styled.div`
   height: 100%;
   background-image: url(${bg});
   background-size: cover;
+  background-position: center center;
   clip-path: polygon(0 0, 100% 0, 100% 47%, 0 69%);
 `
 
@@ -39,33 +40,48 @@ const AppContainer = styled(Container)`
   background-color: #fff;
 `
 
-const ProfilePic = styled.div`
-  position: absolute;
-  width: 10rem;
-  height: 10rem;
-`
+const TopSideContainer = function(props) {
+  return <Col xs="12" className={`d-flex pt-3 justify-content-center ${props.className}`}><Button>prova</Button></Col>
+}
+
+const Avatar = function () {
+  const AvatarImg = styled.div`
+    min-width: 256px;
+  `
+  const AvatarContainer = styled(Col)`
+    @media only screen and (max-width: ${breakpoints.md}){
+      min-height: 10rem;
+    }
+  `
+  
+  return <AvatarContainer className="justify-content-center d-flex order-1 order-sm-1 order-lg-2" md="12" sm="12" lg="auto">
+    <AvatarImg className="card-profile-image">
+      <img className="m-0 rounded-circle" src={photo}></img>
+    </AvatarImg>
+  </AvatarContainer>
+}
+
+const TopBar = function() {
+  return <Container fluid>
+    <Row className="justify-content-center">
+      <TopSideContainer className="order-2 order-sm-2 col-sm-6 order-lg-1 col-lg-3"/>
+      <Avatar/>
+      <TopSideContainer className="order-3 order-md-3 col-sm-6 order-lg-3 col-lg-3"/>
+    </Row>
+  </Container>
+}
 
 function App() {
   return (
     <>
-    <AppContainerWrapper>
-      <AppContainer className="card card-profile shadow" fluid>
+    <AppContainerWrapper className="profile-page">
+      <AppContainer className="card card-profile shadow mt-0" fluid>
+        <TopBar/>
         <Container fluid>
-          <Row>
-              <Col xs="3">prova</Col>
-              <Col className="justify-content-center position-relative d-flex mt--5">
-                <ProfilePic className="avatar card-profile shadow">
-                  <img className="m-0" src={photo}></img>
-                </ProfilePic>
-              </Col>
-              <Col xs="3">prova</Col>
-            </Row>
-          </Container>
-          <Container fluid>
-            <Row className="w-100">
-              <Col className="h-100">prova</Col>
-            </Row>
-          </Container>
+          <Row className="w-100">
+            <Col className="h-100">prova</Col>
+          </Row>
+        </Container>
       </AppContainer>
       </AppContainerWrapper>
       <BgStatic/>
