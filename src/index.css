@@ -1,0 +1,14 @@
+.fullPage {
+  height: 100%;
+  width: 100%;
+  overflow: hidden auto;
+}
+
+@media print {
+  body {
+    width: 21cm !important;
+    height: 29.7cm;
+    /* margin: 30mm 45mm 30mm 45mm; */
+    /* change the margins as you want them to be. */
+  }
+}
