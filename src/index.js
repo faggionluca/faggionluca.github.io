@@ -6,6 +6,11 @@ import * as serviceWorker from './serviceWorker';
 import { ThemeProvider } from 'styled-components';
 import { theme } from './global-components';
 import 'animate.css';
+import { faArtstation, faGithubSquare } from '@fortawesome/free-brands-svg-icons';
+import { library } from '@fortawesome/fontawesome-svg-core';
+
+library.add(faGithubSquare, faArtstation);
+
 
 ReactDOM.render(
   <React.StrictMode>
