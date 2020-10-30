@@ -1,0 +1,14 @@
+{
+	"social": [
+		{
+			"icon": ["fab", "github-square"],
+			"link": "https://github.com/darkimage",
+			"name": "Github"
+		},
+		{
+			"icon": ["fab", "artstation"],
+			"link": "https://github.com/darkimage",
+			"name": "Artstation"
+		}
+	]
+}
