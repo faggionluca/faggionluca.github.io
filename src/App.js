@@ -7,6 +7,8 @@ import 'argon-design-system-react/src/assets/css/argon-design-system-react.css'
 import { Button, Container,Row ,Col} from 'reactstrap';
 import bg from './assets/images/bg.svg';
 import photo from './assets/images/photo.jpg';
+import data from './assets/data.json';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const AppContainerWrapper = styled.div`
   display: grid;
@@ -41,7 +43,7 @@ const AppContainer = styled(Container)`
 `
 
 const TopSideContainer = function(props) {
-  return <Col xs="12" className={`d-flex pt-3 justify-content-center ${props.className}`}><Button>prova</Button></Col>
+  return <Col xs="12" className={`d-flex pt-3 justify-content-center ${props.className}`}>{props.children}</Col>
 }
 
 const Avatar = function () {
@@ -61,10 +63,42 @@ const Avatar = function () {
   </AvatarContainer>
 }
 
+
+const SocialIcon = function (props) {
+  const LinkIcon = styled.a`
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    p {
+      font-size: 0.8rem;
+    }
+  `
+
+  return <div {...props} className="pl-4">
+    <LinkIcon href={props.icon.link}>
+      <FontAwesomeIcon size="3x" icon={props.icon.icon} />
+      <p>{props.icon.name}</p>
+    </LinkIcon>
+  </div>
+}
+
+const SocialIcons = function (props) {
+  const icons = data.social.map((icon, index) => <SocialIcon key={index} icon={icon}/>)
+
+  return <Container className="justify-content-center">
+    <Row className="justify-content-center">
+      {icons}
+    </Row>
+  </Container>
+}
+
 const TopBar = function() {
   return <Container fluid>
     <Row className="justify-content-center">
-      <TopSideContainer className="order-2 order-sm-2 col-sm-6 order-lg-1 col-lg-3"/>
+      <TopSideContainer className="order-2 order-sm-2 col-sm-6 order-lg-1 col-lg-3">
+        <SocialIcons/>
+      </TopSideContainer>
       <Avatar/>
       <TopSideContainer className="order-3 order-md-3 col-sm-6 order-lg-3 col-lg-3"/>
     </Row>
