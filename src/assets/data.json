@@ -20,8 +20,8 @@
 		"name": "Luca",
 		"surname": "Faggion",
 		"school": [
-			{"type": "Diploma", "name": "ITG Rondani, Parma"},
-			{"type": "Studente", "name": "Corso in Ingengneria Informatica, Eletronica, Telecomunicazioni, Parma "}
+			{"type": "Studente", "name": "Corso in Ingengneria Informatica, Eletronica, Telecomunicazioni, Parma "},
+			{"type": "Diploma", "name": "ITG Rondani, Parma"}
 		],
 		"cellphone": "3395472642",
 		"hobbies": "Realtime Graphics, 3D Modelling e Automation Scripts",
