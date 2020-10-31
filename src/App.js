@@ -79,7 +79,7 @@ const SocialIcon = function (props) {
     }
   `
 
-  return <div {...props} className="pl-4">
+  return <div {...props}>
     <LinkIcon href={props.icon.link}>
       <FontAwesomeIcon size="3x" icon={props.icon.icon} />
       <span>{props.icon.name}</span>
@@ -88,7 +88,13 @@ const SocialIcon = function (props) {
 }
 
 const SocialIcons = function (props) {
-  const icons = data.social.map((icon, index) => <SocialIcon key={index} icon={icon}/>)
+  const icons = data.social.map((icon, index) => {
+    if (index != data.social.length-1) {
+      return <SocialIcon key={index} icon={icon} className="pr-4" />
+    } else {
+      return <SocialIcon key={index} icon={icon}  />
+    }
+  })
   return <Row className="justify-content-center" fluid>{icons}</Row>
 }
 
@@ -106,6 +112,9 @@ const TopBar = function() {
 
 const PersonalDetails = function () {
   const DetailsContainer = styled(Col)`min-width: 256px;`;
+  const schoolsData = data.details.school.map((school, index) => <div key={index} className="h6 mt-2">
+    <span className="font-weight-lighter">{school.type}</span> @ <span>{school.name}</span>
+  </div>)
 
   return <Row fluid className="justify-content-center d-flex mt-5">
     <DetailsContainer lg='auto' className="justify-content-center text-center">
@@ -118,9 +127,17 @@ const PersonalDetails = function () {
       <div className="h6 font-weight-300">
         {data.details.city}, {data.details.state}
       </div>
+      {schoolsData}
     </DetailsContainer>
   </Row>
 }
+
+const OtherContacts = function () {
+  return <Row fluid className="py-5 border-top mt-5 mx-4 px-5">
+    prova
+  </Row>
+}
+
 
 function App() {
   return (
@@ -129,6 +146,7 @@ function App() {
       <AppContainer className="card card-profile shadow mt-0" fluid>
         <TopBar />
         <PersonalDetails/>
+        <OtherContacts/>
       </AppContainer>
       </AppContainerWrapper>
       <BgStatic/>
