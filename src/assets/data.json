@@ -7,8 +7,24 @@
 		},
 		{
 			"icon": ["fab", "artstation"],
-			"link": "https://github.com/darkimage",
+			"link": "https://www.artstation.com/darkimage",
 			"name": "Artstation"
 		}
-	]
+	],
+	"contact_email": "luc-af@live.it",
+	"details": {
+		"city": "Parma",
+		"state": "Italia",
+		"birthdate": "12/04/1995",
+		"email": "luca.faggion@studenti.unipr.it",
+		"name": "Luca",
+		"surname": "Faggion",
+		"school": [
+			{"type": "Diploma", "name": "ITG Rondani, Parma"},
+			{"type": "Studente", "name": "Corso in Ingengneria Informatica, Eletronica, Telecomunicazioni, Parma "}
+		],
+		"cellphone": "3395472642",
+		"hobbies": "Realtime Graphics, 3D Modelling e Automation Scripts",
+		"programming": "C++, Python, Typescript/JS, Java"
+	}
 }
