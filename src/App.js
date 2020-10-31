@@ -19,8 +19,8 @@ function _calculateAge(birthday) { // birthday is a date
 
 const AppContainerWrapper = styled.div`
   display: grid;
-	width: 100%;
-	height: 100%;
+  width: 100%;
+  height: 100%;
   padding: 20vh 20vw;
 
   @media only screen and (max-width: ${breakpoints.md}){
