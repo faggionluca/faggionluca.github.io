@@ -15,6 +15,7 @@
 	"details": {
 		"city": "Parma",
 		"state": "Italia",
+		"birthplace": "La Spezia",
 		"birthdate": "12/04/1995",
 		"email": "luca.faggion@studenti.unipr.it",
 		"name": "Luca",
@@ -25,6 +26,11 @@
 		],
 		"cellphone": "3395472642",
 		"hobbies": "Realtime Graphics, 3D Modelling e Automation Scripts",
-		"programming": "C++, Python, Typescript/JS, Java"
+		"programming": [
+			{"language": "C++", "icon": ["fa", "cuttlefish"]},
+			{"language": "Python", "icon": ["fa", "python"]},
+			{"language": "Typescript/JS", "icon": ["fa", "js"]},
+			{"language": "Java", "icon": ["fa", "java"]}
+		]
 	}
 }
