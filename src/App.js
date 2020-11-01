@@ -152,6 +152,7 @@ const OtherContacts = function () {
       padding-top: 0;
       max-height: 0;
       height: 100%;
+      width: 100%;
       transition: all 0.3s ease-out;
     `
     return <CSSTransition in={opened} timeout={400} classNames="dropDownSectionWrapper">
@@ -162,7 +163,7 @@ const OtherContacts = function () {
       </div>
       </CSSTransition>
       <CSSTransition in={opened} timeout={400}  classNames="dropDownSection">
-        <RowContainer>
+        <RowContainer xs="12" className=" justify-content-center">
           {props.children}
         </RowContainer>
       </CSSTransition>
@@ -174,9 +175,23 @@ const OtherContacts = function () {
     position: absolute;
     background-color: #fff;
   `
-
-  return <DropDownContacts fluid className={`border-top mt-5 mx-4 px-5 d-flex`}>
-    <Col>
+  
+  return <DropDownContacts className={`border-top mt-5 mx-4 px-5 d-flex`}>
+    <Col xs="auto">
+      <Row className="text-right d-block">Data di Nascita</Row>
+      <Row className="text-right d-block">Luogo di Nascita</Row>
+      <Row className="text-right d-block">E-mail</Row>
+      <Row className="text-right d-block">Cellulare</Row>
+      <Row className="text-right d-block">PROVA</Row>
+    </Col>
+    <Col xs="auto">
+      <Row>:</Row>
+      <Row>:</Row>
+      <Row>:</Row>
+      <Row>:</Row>
+      <Row>:</Row>
+    </Col>
+    <Col xs="auto">
       <Row>PROVA</Row>
       <Row>PROVA</Row>
       <Row>PROVA</Row>
