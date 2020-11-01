@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 // import Sidebar from './sidebar';
 import styled from 'styled-components';
 // import { withAnimated, withAnimatedGroup } from '@darkimage/react-animate-hoc';
@@ -9,6 +9,8 @@ import bg from './assets/images/bg.svg';
 import photo from './assets/images/photo.jpg';
 import data from './assets/data.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronCircleDown } from '@fortawesome/free-solid-svg-icons'
+import { CSSTransition } from 'react-transition-group';
 
 // https://stackoverflow.com/a/21984136/6791579
 function _calculateAge(birthday) { // birthday is a date
@@ -89,7 +91,7 @@ const SocialIcon = function (props) {
 
 const SocialIcons = function (props) {
   const icons = data.social.map((icon, index) => {
-    if (index != data.social.length-1) {
+    if (index !== data.social.length-1) {
       return <SocialIcon key={index} icon={icon} className="pr-4" />
     } else {
       return <SocialIcon key={index} icon={icon}  />
@@ -133,11 +135,56 @@ const PersonalDetails = function () {
 }
 
 const OtherContacts = function () {
-  return <Row fluid className="py-5 border-top mt-5 mx-4 px-5">
-    prova
-  </Row>
-}
 
+  const DropDownContacts = function (props) {
+    const [opened, setOpened] = useState(false);
+  
+    const toggleDropDown = () => {
+      if (opened === false) {
+        setOpened(true);
+      } else {
+        setOpened(false);
+      }
+    }
+    const RowContainer = styled(Row)`
+      overflow: hidden;
+      box-sizing: border-box;
+      padding-top: 0;
+      max-height: 0;
+      height: 100%;
+      transition: all 0.3s ease-out;
+    `
+    return <CSSTransition in={opened} timeout={400} classNames="dropDownSectionWrapper">
+      <Row {...props} className={`${props.className} dropDownSection`}>
+      <CSSTransition in={opened} timeout={400} classNames="dropDownChevron">
+      <div onClick={toggleDropDown} className="d-flex w-100 justify-content-center">
+        <ChevronShow className="mt--2 rounded-circle shadow-sm" style={{color: "var(--light)"}} icon={faChevronCircleDown} />
+      </div>
+      </CSSTransition>
+      <CSSTransition in={opened} timeout={400}  classNames="dropDownSection">
+        <RowContainer>
+          {props.children}
+        </RowContainer>
+      </CSSTransition>
+      </Row> 
+    </CSSTransition>
+  }
+
+  const ChevronShow = styled(FontAwesomeIcon)`
+    position: absolute;
+    background-color: #fff;
+  `
+
+  return <DropDownContacts fluid className={`border-top mt-5 mx-4 px-5 d-flex`}>
+    <Col>
+      <Row>PROVA</Row>
+      <Row>PROVA</Row>
+      <Row>PROVA</Row>
+      <Row>PROVA</Row>
+      <Row>PROVA</Row>
+    </Col>
+  </DropDownContacts>
+}
 
 function App() {
   return (
@@ -146,7 +193,32 @@ function App() {
       <AppContainer className="card card-profile shadow mt-0" fluid>
         <TopBar />
         <PersonalDetails/>
-        <OtherContacts/>
+        <OtherContacts />
+        <Row>PROVA</Row>
+        <Row>PROVA</Row>
+        <Row>PROVA</Row>
+        <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+        <Row>PROVA</Row>
+        <Row>PROVA</Row>
+        <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+        <Row>PROVA</Row>
+        <Row>PROVA</Row>
+        <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+        <Row>PROVA</Row>
+        <Row>PROVA</Row>
+        <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+        <Row>PROVA</Row>
+        <Row>PROVA</Row>
+        <Row>PROVA</Row>
+        <Row>PROVA</Row>
       </AppContainer>
       </AppContainerWrapper>
       <BgStatic/>
