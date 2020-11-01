@@ -15,7 +15,6 @@
 	"details": {
 		"city": "Parma",
 		"state": "Italia",
-		"birthplace": "La Spezia",
 		"birthdate": "12/04/1995",
 		"email": "luca.faggion@studenti.unipr.it",
 		"name": "Luca",
@@ -24,13 +23,18 @@
 			{"type": "Studente", "name": "Corso in Ingengneria Informatica, Eletronica, Telecomunicazioni, Parma "},
 			{"type": "Diploma", "name": "ITG Rondani, Parma"}
 		],
-		"cellphone": "3395472642",
 		"hobbies": "Realtime Graphics, 3D Modelling e Automation Scripts",
 		"programming": [
 			{"language": "C++", "icon": ["fa", "cuttlefish"]},
 			{"language": "Python", "icon": ["fa", "python"]},
 			{"language": "Typescript/JS", "icon": ["fa", "js"]},
 			{"language": "Java", "icon": ["fa", "java"]}
-		]
+		],
+		"more": {
+			"Luogo di Nascita": "La Spezia",
+			"Data di Nascita": "4 Dicembre 1995",
+			"Cellulare": "3395472642",
+			"E-mail": "luca.faggion@studenti.unipr.it"
+		}
 	}
 }
