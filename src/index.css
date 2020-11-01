@@ -2,7 +2,7 @@
 
 html {
   --section-duration: 400ms;
-  --section-size: 200px;
+  --section-size: 400px;
 }
 
 .dropDownSectionWrapper-enter {
@@ -15,7 +15,7 @@ html {
 
 .dropDownSectionWrapper-enter-done {
   border-bottom: 0.0625rem solid #e9ecef !important;
-}
+} 
 
 .dropDownSectionWrapper-exit-active {
   border-bottom: none;
