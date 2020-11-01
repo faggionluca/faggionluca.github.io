@@ -44,7 +44,7 @@ const BgStatic = styled.div`
   background-image: url(${bg});
   background-size: cover;
   background-position: center center;
-  clip-path: polygon(0 0, 100% 0, 100% 47%, 0 69%);
+  clip-path: polygon(0 0, 100% 0, 100% 40%, 0 48%);
 `
 
 const AppContainer = styled(Container)`
@@ -175,29 +175,20 @@ const OtherContacts = function () {
     position: absolute;
     background-color: #fff;
   `
-  
+
+  const dataDesc = Object.keys(data.details.more).map((data, index) => <Row index={index} className="text-right d-block font-weight-bold">{data}</Row>)
+  const dataSep = Object.keys(data.details.more).map((_ , index) => <Row index={index}>:</Row>)
+  const dataValues = []
+  for (const key in data.details.more) {
+    if (data.details.more.hasOwnProperty(key)) {
+      dataValues.push(<Row index={key}>{data.details.more[key]}</Row>);
+    }
+  }
+
   return <DropDownContacts className={`border-top mt-5 mx-4 px-5 d-flex`}>
-    <Col xs="auto">
-      <Row className="text-right d-block">Data di Nascita</Row>
-      <Row className="text-right d-block">Luogo di Nascita</Row>
-      <Row className="text-right d-block">E-mail</Row>
-      <Row className="text-right d-block">Cellulare</Row>
-      <Row className="text-right d-block">PROVA</Row>
-    </Col>
-    <Col xs="auto">
-      <Row>:</Row>
-      <Row>:</Row>
-      <Row>:</Row>
-      <Row>:</Row>
-      <Row>:</Row>
-    </Col>
-    <Col xs="auto">
-      <Row>PROVA</Row>
-      <Row>PROVA</Row>
-      <Row>PROVA</Row>
-      <Row>PROVA</Row>
-      <Row>PROVA</Row>
-    </Col>
+    <Col xs="auto">{dataDesc}</Col>
+    <Col xs="auto">{dataSep}</Col>
+    <Col xs="auto">{dataValues}</Col>
   </DropDownContacts>
 }
 
