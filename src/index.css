@@ -1,5 +1,78 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
 
+html {
+  --section-duration: 400ms;
+  --section-size: 200px;
+}
+
+.dropDownSectionWrapper-enter {
+  border-bottom: none;
+}
+
+.dropDownSectionWrapper-enter-active {
+  border-bottom: 0.0625rem solid #e9ecef !important;
+}
+
+.dropDownSectionWrapper-enter-done {
+  border-bottom: 0.0625rem solid #e9ecef !important;
+}
+
+.dropDownSectionWrapper-exit-active {
+  border-bottom: none;
+}
+
+.dropDownSection-enter {
+  max-height: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.dropDownSection-enter-active {
+  max-height: var(--section-size) !important;
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}
+
+.dropDownSection-enter-done {
+  max-height: var(--section-size) !important;
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}
+
+.dropDownSection-exit {
+  max-height: var(--section-size) !important;
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}
+
+.dropDownSection-exit-active {
+  padding-top: 0 !important;
+  max-height: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.dropDownChevron-enter svg{
+  transform: rotate(0deg);
+}
+
+.dropDownChevron-enter-active svg{
+  transform: rotate(180deg);
+  transition: transform var(--section-duration) ease-out;
+}
+
+.dropDownChevron-enter-done svg{
+  transform: rotate(180deg);
+}
+
+.dropDownChevron-exit svg{
+  transform: rotate(180deg);
+}
+
+.dropDownChevron-exit-active svg{
+  transform: rotate(0deg);
+  transition: transform var(--section-duration) ease-out;
+}
+
 @media print {
   body {
     width: 21cm !important;
