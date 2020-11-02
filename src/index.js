@@ -6,10 +6,17 @@ import * as serviceWorker from './serviceWorker';
 import { ThemeProvider } from 'styled-components';
 import { theme } from './global-components';
 import 'animate.css';
-import { faArtstation, faGithubSquare } from '@fortawesome/free-brands-svg-icons';
+import { faArtstation, faGithubSquare, faCuttlefish, faJs, faPython, faJava } from '@fortawesome/free-brands-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
 
-library.add(faGithubSquare, faArtstation);
+library.add(
+  faGithubSquare,
+  faArtstation,
+  faCuttlefish,
+  faJs,
+  faPython,
+  faJava
+);
 
 
 ReactDOM.render(
