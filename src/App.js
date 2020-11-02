@@ -108,18 +108,18 @@ const OtherContacts = function () {
     }
     
     return <CSSTransition in={opened} timeout={400} classNames="dropDownSectionWrapper">
-      <Row {...props} className={`${props.className} dropDownSection`}>
+      <comp.RowSection {...props} className={`${props.className} dropDownSection`}>
       <CSSTransition in={opened} timeout={400} classNames="dropDownChevron">
-      <div onClick={toggleDropDown} className="d-flex w-100 justify-content-center">
-        <comp.MoreChevron className="mt--2 rounded-circle shadow-sm" style={{color: "var(--light)"}} icon={faChevronCircleDown} />
-      </div>
+        <div onClick={toggleDropDown} className="d-flex w-100 justify-content-center">
+          <comp.MoreChevron className="mt--2 rounded-circle shadow-sm" style={{color: "var(--light)"}} icon={faChevronCircleDown} />
+        </div>
       </CSSTransition>
       <CSSTransition in={opened} timeout={400}  classNames="dropDownSection">
         <comp.MoreContainer xs="12" className=" justify-content-center">
           {props.children}
         </comp.MoreContainer>
       </CSSTransition>
-      </Row> 
+      </comp.RowSection> 
     </CSSTransition>
   }
 
@@ -132,7 +132,7 @@ const OtherContacts = function () {
     }
   }
 
-  return <DropDownContacts className={`border-top mt-5 mx-4 px-5 d-flex`}>
+  return <DropDownContacts>
     <Col xs="auto">{dataDesc}</Col>
     <Col xs="auto">{dataSep}</Col>
     <Col xs="auto">{dataValues}</Col>
@@ -140,78 +140,86 @@ const OtherContacts = function () {
 }
 
 const WhoAmI = function (props) {
-  return <Row className="mt-5 justify-content-center">
-      <Col xs="auto" className="justify-content-center">
-        <Row><h2 className="text-weight-bold">Who am I?</h2></Row>
-        <Row className="justify-content-center">{data.whoiam}</Row>
+  return <comp.RowSection border={false}>
+      <Col xs="auto">
+        <Row className="justify-content-center" ><h2 className="text-weight-bold text-center">Who am I?</h2></Row>
+        <Row className="justify-content-center text-center">{data.whoiam}</Row>
       </Col>
-    </Row>
+    </comp.RowSection>
+}
+
+const ProgettiUni = function (props) {
+  return <comp.RowSection>
+    <h2 className="mt-5">
+      Progetti Universitari
+    </h2>
+  </comp.RowSection>
 }
 
 function App() {
   return (
     <>
-    <comp.AppWrapper className="profile-page">
-      <comp.AppContainer className="card card-profile shadow mt-0" fluid>
-        <TopBar />
-        <PersonalDetails/>
-        <OtherContacts />
-        <WhoAmI/>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-        <Row>PROVA</Row>
-      </comp.AppContainer>
+      <comp.AppWrapper className="profile-page">
+        <comp.AppContainer className="card card-profile shadow mt-0" fluid>
+          <TopBar />
+          <PersonalDetails/>
+          <OtherContacts />
+          <WhoAmI />
+          <ProgettiUni/>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+          <Row>PROVA</Row>
+        </comp.AppContainer>
       </comp.AppWrapper>
-      <comp.BgStatic/>
-    </>
-  );
+    <comp.BgStatic/>
+  </>);
 }
 
 export default App;
