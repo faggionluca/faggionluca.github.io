@@ -70,31 +70,38 @@ const Avatar = function () {
 }
 
 
-const SocialIcon = function (props) {
-  const LinkIcon = styled.a`
+const IconWithDesc = function (props) {
+  const IconContainer = styled.div`
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
     p {
       font-size: 0.8rem;
-    }
-  `
+    }`
 
-  return <div {...props}>
-    <LinkIcon href={props.icon.link}>
-      <FontAwesomeIcon size="3x" icon={props.icon.icon} />
+  if (props.icon.hasOwnProperty("link")) {
+    return <IconContainer {...props}>
+      <a href={props.icon.link}>
+        <FontAwesomeIcon size={props.iconSize ? props.iconSize : "2x"} icon={props.icon.icon} />
+      </a>
+      <a href={props.icon.link}><span>{props.icon.name}</span></a>
+    </IconContainer>
+  } else {
+    return <IconContainer {...props}>
+      <FontAwesomeIcon size={props.iconSize ? props.iconSize : "2x"} icon={props.icon.icon} />
       <span>{props.icon.name}</span>
-    </LinkIcon>
-  </div>
+    </IconContainer>
+  }
+
 }
 
 const SocialIcons = function (props) {
   const icons = data.social.map((icon, index) => {
     if (index !== data.social.length-1) {
-      return <SocialIcon key={index} icon={icon} className="pr-4" />
+      return <IconWithDesc key={index} icon={icon} className="pr-4" />
     } else {
-      return <SocialIcon key={index} icon={icon}  />
+      return <IconWithDesc key={index} icon={icon} />
     }
   })
   return <Row className="justify-content-center" fluid>{icons}</Row>
@@ -118,6 +125,8 @@ const PersonalDetails = function () {
     <span className="font-weight-lighter">{school.type}</span> @ <span>{school.name}</span>
   </div>)
 
+  const languages = data.details.programming.map((value, index) => <Col><IconWithDesc icon={value} key={index}/></Col>)
+  
   return <Row fluid className="justify-content-center d-flex mt-5">
     <DetailsContainer lg='auto' className="justify-content-center text-center">
       <h3>
@@ -130,6 +139,7 @@ const PersonalDetails = function () {
         {data.details.city}, {data.details.state}
       </div>
       {schoolsData}
+      <Row className="mt-3">{languages}</Row>
     </DetailsContainer>
   </Row>
 }
@@ -204,23 +214,23 @@ function App() {
         <Row>PROVA</Row>
         <Row>PROVA</Row>
         <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
         <Row>PROVA</Row>
         <Row>PROVA</Row>
         <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
         <Row>PROVA</Row>
         <Row>PROVA</Row>
         <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
         <Row>PROVA</Row>
         <Row>PROVA</Row>
         <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
+        <Row>PROVA</Row>
+        <Row>PROVA</Row>
+        <Row>PROVA</Row>
+        <Row>PROVA</Row>
+        <Row>PROVA</Row>
+        <Row>PROVA</Row>
+        <Row>PROVA</Row>
+        <Row>PROVA</Row>
         <Row>PROVA</Row>
         <Row>PROVA</Row>
         <Row>PROVA</Row>
