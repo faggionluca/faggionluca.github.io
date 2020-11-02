@@ -18,7 +18,7 @@ function _calculateAge(birthday) { // birthday is a date
 
 
 const TopSideContainer = function(props) {
-  return <Col xs="12" className={`d-flex pt-3 justify-content-center align-items-center ${props.className}`}>{props.children}</Col>
+  return <Col xs="12" className={`d-flex pt-1 pt-md-3 justify-content-center align-items-center ${props.className}`}>{props.children}</Col>
 }
 
 const Avatar = function () {
@@ -77,7 +77,7 @@ const PersonalDetails = function () {
 
   const languages = data.details.programming.map((value, index) => <Col key={index} xs="auto"><IconWithDesc icon={value} /></Col>)
   
-  return <Row className="justify-content-center d-flex mt-7">
+  return <Row className="justify-content-center d-flex mt-4 mt-md-7">
     <Col style={{minWidth: "256px"}} lg='auto' className="justify-content-center text-center">
       <h3>
         {`${data.details.name} ${data.details.surname}`}
@@ -89,7 +89,7 @@ const PersonalDetails = function () {
         {data.details.city}, {data.details.state}
       </div>
       {schoolsData}
-      <Row className="mt-3 justify-content-center">{languages}</Row>
+      <Row className="mt-5 justify-content-center">{languages}</Row>
     </Col>
   </Row>
 }
