@@ -25,10 +25,10 @@
 		],
 		"hobbies": "Realtime Graphics, 3D Modelling e Automation Scripts",
 		"programming": [
-			{"language": "C++", "icon": ["fa", "cuttlefish"]},
-			{"language": "Python", "icon": ["fa", "python"]},
-			{"language": "Typescript/JS", "icon": ["fa", "js"]},
-			{"language": "Java", "icon": ["fa", "java"]}
+			{"name": "C++", "icon": ["fab", "cuttlefish"]},
+			{"name": "Python", "icon": ["fab", "python"]},
+			{"name": "Typescript/JS", "icon": ["fab", "js"]},
+			{"name": "Java", "icon": ["fab", "java"]}
 		],
 		"more": {
 			"Luogo di Nascita": "La Spezia",
