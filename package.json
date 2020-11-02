@@ -17,8 +17,10 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-intersection-observer": "^8.28.4",
+    "react-markdown": "^5.0.2",
     "react-scripts": "3.4.3",
     "react-transition-group": "^4.4.1",
+    "remark-gfm": "^1.0.0",
     "styled-components": "^5.2.0"
   },
   "scripts": {
