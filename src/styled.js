@@ -3,6 +3,7 @@ import { Container, Col, Row } from 'reactstrap';
 import { breakpoints } from './global-components';
 import bg from './assets/images/bg.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from 'react';
 
 export const AppWrapper = styled.div`
 	display: grid;
@@ -70,3 +71,11 @@ export const MoreChevron = styled(FontAwesomeIcon)`
 	position: absolute;
 	background-color: #fff;
 `
+
+export const RowSection = function (props) {
+	let border = "border-top"
+	if (props.border === false) {
+		border = ""
+	}
+	return <Row {...props} className={`${border} mt-5 mx-4 px-5 justify-content-center ${props.className}`}>{props.children}</Row>
+}
