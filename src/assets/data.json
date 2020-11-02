@@ -11,7 +11,7 @@
 			"name": "Artstation"
 		}
 	],
-	"whoiam": "prova",
+	"whoiam": "Sono un ragazzo appassionato dall'informatica, figlio della rivoluzione digitale, studente di ingegneria e geek di Dev OPS!",
 	"contact_email": "luc-af@live.it",
 	"details": {
 		"city": "Parma",
@@ -21,7 +21,7 @@
 		"name": "Luca",
 		"surname": "Faggion",
 		"school": [
-			{"type": "Studente", "name": "Corso in Ingengneria Informatica, Eletronica, Telecomunicazioni, Parma "},
+			{"type": "Studente", "name": "Corso in Ingegneria Informatica, Eletronica e Telecomunicazioni, Universita' di Parma "},
 			{"type": "Diploma", "name": "ITG Rondani, Parma"}
 		],
 		"hobbies": "Realtime Graphics, 3D Modelling e Automation Scripts",
