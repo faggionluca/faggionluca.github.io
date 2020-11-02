@@ -1,16 +1,13 @@
 import React, { useState } from 'react';
-// import Sidebar from './sidebar';
-import styled from 'styled-components';
 // import { withAnimated, withAnimatedGroup } from '@darkimage/react-animate-hoc';
-import { breakpoints } from './global-components';
 import 'argon-design-system-react/src/assets/css/argon-design-system-react.css'
-import { Button, Container,Row ,Col} from 'reactstrap';
-import bg from './assets/images/bg.svg';
+import { Button ,Row ,Col} from 'reactstrap';
 import photo from './assets/images/photo.jpg';
 import data from './assets/data.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronCircleDown } from '@fortawesome/free-solid-svg-icons'
 import { CSSTransition } from 'react-transition-group';
+import * as comp from './styled';
 
 // https://stackoverflow.com/a/21984136/6791579
 function _calculateAge(birthday) { // birthday is a date
@@ -19,79 +16,33 @@ function _calculateAge(birthday) { // birthday is a date
   return Math.abs(ageDate.getUTCFullYear() - 1970);
 }
 
-const AppContainerWrapper = styled.div`
-  display: grid;
-  width: 100%;
-  height: 100%;
-  padding: 20vh 20vw;
-
-  @media only screen and (max-width: ${breakpoints.md}){
-    padding: 10vh 15vw;
-  }
-
-  @media only screen and (max-width: ${breakpoints.xl}){
-    padding: 15vh 10vw;
-  }
-`;
-
-const BgStatic = styled.div`
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(${bg});
-  background-size: cover;
-  background-position: center center;
-  clip-path: polygon(0 0, 100% 0, 100% 40%, 0 48%);
-`
-
-const AppContainer = styled(Container)`
-  background-color: #fff;
-`
 
 const TopSideContainer = function(props) {
   return <Col xs="12" className={`d-flex pt-3 justify-content-center align-items-center ${props.className}`}>{props.children}</Col>
 }
 
 const Avatar = function () {
-  const AvatarContainer = styled(Col)`
-    @media only screen and (max-width: ${breakpoints.md}){
-      min-height: 10rem;
-    }
-  `
-
-  return <AvatarContainer className="justify-content-center d-flex order-1 order-sm-1 order-lg-2 p-0" md="12" sm="12" lg="auto">
+  return <comp.AvatarContainer className="justify-content-center d-flex order-1 order-sm-1 order-lg-2 p-0" md="12" sm="12" lg="auto">
     <div className="card-profile-image">
-      <img className="m-0 rounded-circle" src={photo}></img>
+      <img alt="" className="m-0 rounded-circle" src={photo}></img>
     </div>
-  </AvatarContainer>
+  </comp.AvatarContainer>
 }
 
 
 const IconWithDesc = function (props) {
-  const IconContainer = styled.div`
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-    p {
-      font-size: 0.8rem;
-    }`
-
   if (props.icon.hasOwnProperty("link")) {
-    return <IconContainer {...props}>
+    return <comp.IconContainer {...props}>
       <a href={props.icon.link}>
         <FontAwesomeIcon size={props.iconSize ? props.iconSize : "2x"} icon={props.icon.icon} />
       </a>
       <a href={props.icon.link}><span>{props.icon.name}</span></a>
-    </IconContainer>
+    </comp.IconContainer>
   } else {
-    return <IconContainer {...props}>
+    return <comp.IconContainer {...props}>
       <FontAwesomeIcon size={props.iconSize ? props.iconSize : "2x"} icon={props.icon.icon} />
       <span>{props.icon.name}</span>
-    </IconContainer>
+    </comp.IconContainer>
   }
 
 }
@@ -104,11 +55,11 @@ const SocialIcons = function (props) {
       return <IconWithDesc key={index} icon={icon} />
     }
   })
-  return <Row className="justify-content-center" fluid>{icons}</Row>
+  return <Row className="justify-content-center">{icons}</Row>
 }
 
 const TopBar = function() {
-  return <Row className="justify-content-center" fluid>
+  return <Row className="justify-content-center">
       <TopSideContainer className="order-2 order-sm-2 col-sm-6 order-lg-1 col-lg-6">
         <SocialIcons/>
       </TopSideContainer>
@@ -120,15 +71,14 @@ const TopBar = function() {
 }
 
 const PersonalDetails = function () {
-  const DetailsContainer = styled(Col)`min-width: 256px;`;
   const schoolsData = data.details.school.map((school, index) => <div key={index} className="h6 mt-2">
     <span className="font-weight-lighter">{school.type}</span> @ <span>{school.name}</span>
   </div>)
 
-  const languages = data.details.programming.map((value, index) => <Col><IconWithDesc icon={value} key={index}/></Col>)
+  const languages = data.details.programming.map((value, index) => <Col key={index} xs="auto"><IconWithDesc icon={value} /></Col>)
   
-  return <Row fluid className="justify-content-center d-flex mt-5">
-    <DetailsContainer lg='auto' className="justify-content-center text-center">
+  return <Row className="justify-content-center d-flex mt-7">
+    <Col style={{minWidth: "256px"}} lg='auto' className="justify-content-center text-center">
       <h3>
         {`${data.details.name} ${data.details.surname}`}
         <span className="font-weight-light">
@@ -139,8 +89,8 @@ const PersonalDetails = function () {
         {data.details.city}, {data.details.state}
       </div>
       {schoolsData}
-      <Row className="mt-3">{languages}</Row>
-    </DetailsContainer>
+      <Row className="mt-3 justify-content-center">{languages}</Row>
+    </Col>
   </Row>
 }
 
@@ -148,50 +98,37 @@ const OtherContacts = function () {
 
   const DropDownContacts = function (props) {
     const [opened, setOpened] = useState(false);
-  
+
     const toggleDropDown = () => {
       if (opened === false) {
         setOpened(true);
       } else {
-        setOpened(false);
+        setOpened(false); 
       }
     }
-    const RowContainer = styled(Row)`
-      overflow: hidden;
-      box-sizing: border-box;
-      padding-top: 0;
-      max-height: 0;
-      height: 100%;
-      width: 100%;
-      transition: all 0.3s ease-out;
-    `
+    
     return <CSSTransition in={opened} timeout={400} classNames="dropDownSectionWrapper">
       <Row {...props} className={`${props.className} dropDownSection`}>
       <CSSTransition in={opened} timeout={400} classNames="dropDownChevron">
       <div onClick={toggleDropDown} className="d-flex w-100 justify-content-center">
-        <ChevronShow className="mt--2 rounded-circle shadow-sm" style={{color: "var(--light)"}} icon={faChevronCircleDown} />
+        <comp.MoreChevron className="mt--2 rounded-circle shadow-sm" style={{color: "var(--light)"}} icon={faChevronCircleDown} />
       </div>
       </CSSTransition>
       <CSSTransition in={opened} timeout={400}  classNames="dropDownSection">
-        <RowContainer xs="12" className=" justify-content-center">
+        <comp.MoreContainer xs="12" className=" justify-content-center">
           {props.children}
-        </RowContainer>
+        </comp.MoreContainer>
       </CSSTransition>
       </Row> 
     </CSSTransition>
   }
 
-  const ChevronShow = styled(FontAwesomeIcon)`
-    position: absolute;
-    background-color: #fff;
-  `
-
-  const dataDesc = Object.keys(data.details.more).map((data, index) => <Row index={index} className="text-right d-block font-weight-bold">{data}</Row>)
-  const dataSep = Object.keys(data.details.more).map((_ , index) => <Row index={index}>:</Row>)
+  const dataDesc = Object.keys(data.details.more).map((data, index) => <Row key={`desc-${index}`} className="text-right d-block font-weight-bold">{data}</Row>)
+  const dataSep = Object.keys(data.details.more).map((_ , index) => <Row key={`sep-${index}`}>:</Row>)
   const dataValues = []
   for (const key in data.details.more) {
     if (data.details.more.hasOwnProperty(key)) {
-      dataValues.push(<Row index={key}>{data.details.more[key]}</Row>);
+      dataValues.push(<Row key={`val-${key}`}>{data.details.more[key]}</Row>);
     }
   }
 
@@ -202,14 +139,24 @@ const OtherContacts = function () {
   </DropDownContacts>
 }
 
+const WhoAmI = function (props) {
+  return <Row className="mt-5 justify-content-center">
+      <Col xs="auto" className="justify-content-center">
+        <Row><h2 className="text-weight-bold">Who am I?</h2></Row>
+        <Row className="justify-content-center">{data.whoiam}</Row>
+      </Col>
+    </Row>
+}
+
 function App() {
   return (
     <>
-    <AppContainerWrapper className="profile-page">
-      <AppContainer className="card card-profile shadow mt-0" fluid>
+    <comp.AppWrapper className="profile-page">
+      <comp.AppContainer className="card card-profile shadow mt-0" fluid>
         <TopBar />
         <PersonalDetails/>
         <OtherContacts />
+        <WhoAmI/>
         <Row>PROVA</Row>
         <Row>PROVA</Row>
         <Row>PROVA</Row>
@@ -235,9 +182,34 @@ function App() {
         <Row>PROVA</Row>
         <Row>PROVA</Row>
         <Row>PROVA</Row>
-      </AppContainer>
-      </AppContainerWrapper>
-      <BgStatic/>
+        <Row>PROVA</Row>
+        <Row>PROVA</Row>
+        <Row>PROVA</Row>
+        <Row>PROVA</Row>
+        <Row>PROVA</Row>
+        <Row>PROVA</Row>
+        <Row>PROVA</Row>
+        <Row>PROVA</Row>
+        <Row>PROVA</Row>
+        <Row>PROVA</Row>
+        <Row>PROVA</Row>
+        <Row>PROVA</Row>
+        <Row>PROVA</Row>
+        <Row>PROVA</Row>
+        <Row>PROVA</Row>
+        <Row>PROVA</Row>
+        <Row>PROVA</Row>
+        <Row>PROVA</Row>
+        <Row>PROVA</Row>
+        <Row>PROVA</Row>
+        <Row>PROVA</Row>
+        <Row>PROVA</Row>
+        <Row>PROVA</Row>
+        <Row>PROVA</Row>
+        <Row>PROVA</Row>
+      </comp.AppContainer>
+      </comp.AppWrapper>
+      <comp.BgStatic/>
     </>
   );
 }
