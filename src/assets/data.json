@@ -11,6 +11,7 @@
 			"name": "Artstation"
 		}
 	],
+	"whoiam": "prova",
 	"contact_email": "luc-af@live.it",
 	"details": {
 		"city": "Parma",
@@ -25,7 +26,7 @@
 		],
 		"hobbies": "Realtime Graphics, 3D Modelling e Automation Scripts",
 		"programming": [
-			{"name": "C++", "icon": ["fab", "cuttlefish"]},
+			{"name": "C/C++", "icon": ["fab", "cuttlefish"]},
 			{"name": "Python", "icon": ["fab", "python"]},
 			{"name": "Typescript/JS", "icon": ["fab", "js"]},
 			{"name": "Java", "icon": ["fab", "java"]}
