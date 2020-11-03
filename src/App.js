@@ -8,14 +8,20 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronCircleDown } from '@fortawesome/free-solid-svg-icons'
 import { CSSTransition } from 'react-transition-group';
 import * as comp from './styled';
+import { Octokit } from '@octokit/rest';
 
-// https://stackoverflow.com/a/21984136/6791579
-function _calculateAge(birthday) { // birthday is a date
-  var ageDifMs = Date.now() - birthday.getTime();
+const ocktokit = new Octokit();
+ocktokit.repos.get({
+  owner: "darkimage",
+  repo: "darkimage.github.io"
+}).then(value => console.log(value));
+
+  // https://stackoverflow.com/a/21984136/6791579
+  function _calculateAge(birthday) { // birthday is a date
+    var ageDifMs = Date.now() - birthday.getTime();
   var ageDate = new Date(ageDifMs); // miliseconds from epoch
   return Math.abs(ageDate.getUTCFullYear() - 1970);
 }
-
 
 const TopSideContainer = function(props) {
   return <Col xs="12" className={`d-flex pt-1 pt-md-3 justify-content-center align-items-center ${props.className}`}>{props.children}</Col>
@@ -28,7 +34,6 @@ const Avatar = function () {
     </div>
   </comp.AvatarContainer>
 }
-
 
 const IconWithDesc = function (props) {
   if (props.icon.hasOwnProperty("link")) {
@@ -44,7 +49,6 @@ const IconWithDesc = function (props) {
       <span>{props.icon.name}</span>
     </comp.IconContainer>
   }
-
 }
 
 const SocialIcons = function (props) {
@@ -74,9 +78,7 @@ const PersonalDetails = function () {
   const schoolsData = data.details.school.map((school, index) => <div key={index} className="h6 mt-2">
     <span className="font-weight-lighter">{school.type}</span> @ <span>{school.name}</span>
   </div>)
-
   const languages = data.details.programming.map((value, index) => <Col key={index} xs="auto"><IconWithDesc icon={value} /></Col>)
-  
   return <Row className="justify-content-center d-flex mt-4 mt-md-7">
     <Col style={{minWidth: "256px"}} lg='auto' className="justify-content-center text-center">
       <h3>
@@ -89,6 +91,7 @@ const PersonalDetails = function () {
         {data.details.city}, {data.details.state}
       </div>
       {schoolsData}
+      <div className="mt-2">{data.details.hobbies}</div>
       <Row className="mt-5 justify-content-center">{languages}</Row>
     </Col>
   </Row>
@@ -140,7 +143,7 @@ const OtherContacts = function () {
 }
 
 const WhoAmI = function (props) {
-  return <comp.RowSection border={false}>
+  return <comp.RowSection border="false">
       <Col xs="auto">
         <Row className="justify-content-center" ><h2 className="text-weight-bold text-center">Who am I?</h2></Row>
         <Row className="justify-content-center text-center">{data.whoiam}</Row>
