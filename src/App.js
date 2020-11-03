@@ -151,11 +151,26 @@ const WhoAmI = function (props) {
     </comp.RowSection>
 }
 
+const ProjectContainer = function (props) {
+  return <Row className="mt-5">
+    <Col xs="auto" className="rounded-lg shadow overflow-hidden p-0">
+      <comp.ProjectImg alt="" src={props.image}></comp.ProjectImg>
+    </Col>
+    <Col className="mx-5">
+      <Row>
+        <h3>{props.title}</h3>
+        <div>{props.desc}</div>
+      </Row>
+    </Col>
+  </Row>
+}
+
 const ProgettiUni = function (props) {
   return <comp.RowSection>
     <h2 className="mt-5">
       Progetti Universitari
     </h2>
+    <ProjectContainer image="https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png" title="Prova Prova" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." />
   </comp.RowSection>
 }
 
