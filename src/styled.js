@@ -74,7 +74,7 @@ export const MoreChevron = styled(FontAwesomeIcon)`
 
 export const RowSection = function (props) {
 	let border = "border-top"
-	if (props.border === false) {
+	if (props.border === "false") {
 		border = ""
 	}
 	return <Row {...props} className={`${border} mt-5 mx-4 px-5 justify-content-center ${props.className}`}>{props.children}</Row>
