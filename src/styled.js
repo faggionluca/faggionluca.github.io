@@ -81,6 +81,8 @@ export const RowSection = function (props) {
 }
 
 export const ProjectImg = styled.img`
-	width: 256px;
-	height: 256px;
+	max-width: 256px;
+	max-height: 256px;
+	width: auto;
+	height: auto;
 `
