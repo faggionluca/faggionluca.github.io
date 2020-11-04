@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 // import { withAnimated, withAnimatedGroup } from '@darkimage/react-animate-hoc';
 import 'argon-design-system-react/src/assets/css/argon-design-system-react.css'
-import { Button ,Row ,Col} from 'reactstrap';
+import { Button ,Row ,Col, Container} from 'reactstrap';
 import photo from './assets/images/photo.jpg';
 import data from './assets/data.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -155,10 +155,10 @@ const WhoAmI = function (props) {
 
 const ProjectContainer = function (props) {
   return <Row className="mt-5 justify-content-center">
-    <Col xs="12" md="auto"className="p-0 position-relative d-flex justify-content-center">
+    <Col xs="auto" className="p-0 position-relative d-flex justify-content-center">
       <comp.ProjectImg className="rounded-lg shadow overflow-hidden" alt="" src={props.image}/>
     </Col>
-    <Col className="mx-5 d-flex justify-content-center mt-sm-3 mt-md-2 mt-lg-0">
+    <Col className="mx-5 mt-sm-3 mt-md-2 mt-lg-0">
       <ReactMarkdown>{props.markdown}</ReactMarkdown>
     </Col>
   </Row>
@@ -166,10 +166,12 @@ const ProjectContainer = function (props) {
 
 const ProgettiUni = function (props) {
   return <comp.RowSection>
-    <h2 className="mt-5">
-      Progetti Universitari
-    </h2>
-    <ProjectContainer markdown={test}/>
+    <Col className="justify-content-center">
+      <h2 className="mt-5 text-center">
+        Progetti Universitari
+      </h2>
+      <ProjectContainer image="https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3" markdown={test} />
+    </Col>
   </comp.RowSection>
 }
 
@@ -235,7 +237,7 @@ function App() {
           <Row>PROVA</Row>
         </comp.AppContainer>
       </comp.AppWrapper>
-    <comp.BgStatic/>
+      <comp.BgStatic/>
   </>);
 }
 
