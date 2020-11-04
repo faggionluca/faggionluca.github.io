@@ -9,6 +9,8 @@ import { faChevronCircleDown } from '@fortawesome/free-solid-svg-icons'
 import { CSSTransition } from 'react-transition-group';
 import * as comp from './styled';
 import { Octokit } from '@octokit/rest';
+import ReactMarkdown from 'react-markdown'
+import test from './assets/projects/test.md';
 
 const ocktokit = new Octokit();
 ocktokit.repos.get({
@@ -17,8 +19,8 @@ ocktokit.repos.get({
 }).then(value => console.log(value));
 
   // https://stackoverflow.com/a/21984136/6791579
-  function _calculateAge(birthday) { // birthday is a date
-    var ageDifMs = Date.now() - birthday.getTime();
+function _calculateAge(birthday) { // birthday is a date
+  var ageDifMs = Date.now() - birthday.getTime();
   var ageDate = new Date(ageDifMs); // miliseconds from epoch
   return Math.abs(ageDate.getUTCFullYear() - 1970);
 }
@@ -152,15 +154,12 @@ const WhoAmI = function (props) {
 }
 
 const ProjectContainer = function (props) {
-  return <Row className="mt-5">
-    <Col xs="auto" className="rounded-lg shadow overflow-hidden p-0">
-      <comp.ProjectImg alt="" src={props.image}></comp.ProjectImg>
+  return <Row className="mt-5 justify-content-center">
+    <Col xs="12" md="auto"className="p-0 position-relative d-flex justify-content-center">
+      <comp.ProjectImg className="rounded-lg shadow overflow-hidden" alt="" src={props.image}/>
     </Col>
-    <Col className="mx-5">
-      <Row>
-        <h3>{props.title}</h3>
-        <div>{props.desc}</div>
-      </Row>
+    <Col className="mx-5 d-flex justify-content-center mt-sm-3 mt-md-2 mt-lg-0">
+      <ReactMarkdown>{props.markdown}</ReactMarkdown>
     </Col>
   </Row>
 }
@@ -170,7 +169,7 @@ const ProgettiUni = function (props) {
     <h2 className="mt-5">
       Progetti Universitari
     </h2>
-    <ProjectContainer image="https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png" title="Prova Prova" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." />
+    <ProjectContainer markdown={test}/>
   </comp.RowSection>
 }
 
@@ -180,10 +179,10 @@ function App() {
       <comp.AppWrapper className="profile-page">
         <comp.AppContainer className="card card-profile shadow mt-0" fluid>
           <TopBar />
-          <PersonalDetails/>
+          <PersonalDetails />
           <OtherContacts />
           <WhoAmI />
-          <ProgettiUni/>
+          <ProgettiUni />
           <Row>PROVA</Row>
           <Row>PROVA</Row>
           <Row>PROVA</Row>
