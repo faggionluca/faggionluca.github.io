@@ -16,6 +16,8 @@ import ingegneriadelsoftware from './assets/projects/ingegneriadelsoftware.md';
 import ingegneriadelsoftwareLogo from './assets/images/ingegneriadelsoftware.png';
 import mobdevandroid from './assets/projects/mobdevandroid.md';
 import mobdevandroidLogo from './assets/images/mobdevandroid.jpg';
+import mobdevios from './assets/projects/mobdevios.md';
+import mobdeviosLogo from './assets/images/mobdevios.png';
 
 const ocktokit = new Octokit();
 ocktokit.repos.get({
@@ -178,6 +180,7 @@ const ProgettiUni = function (props) {
       <ProjectContainer image={basididatiLogo} markdown={basididati} />
       <ProjectContainer image={ingegneriadelsoftwareLogo} markdown={ingegneriadelsoftware} />
       <ProjectContainer image={mobdevandroidLogo} markdown={mobdevandroid} />
+      <ProjectContainer image={mobdeviosLogo} markdown={mobdevios} />
     </Col>
   </comp.RowSection>
 }
