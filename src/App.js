@@ -11,6 +11,8 @@ import * as comp from './styled';
 import { Octokit } from '@octokit/rest';
 import ReactMarkdown from 'react-markdown'
 import test from './assets/projects/test.md';
+import basididati from './assets/projects/basididati.md';
+import basididatiLogo from './assets/projects/basididati.png';
 
 const ocktokit = new Octokit();
 ocktokit.repos.get({
@@ -170,7 +172,7 @@ const ProgettiUni = function (props) {
       <h2 className="mt-5 text-center">
         Progetti Universitari
       </h2>
-      <ProjectContainer image="https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3" markdown={test} />
+      <ProjectContainer image={basididatiLogo} markdown={basididati} />
     </Col>
   </comp.RowSection>
 }
@@ -185,56 +187,6 @@ function App() {
           <OtherContacts />
           <WhoAmI />
           <ProgettiUni />
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
-          <Row>PROVA</Row>
         </comp.AppContainer>
       </comp.AppWrapper>
       <comp.BgStatic/>
