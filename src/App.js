@@ -10,9 +10,10 @@ import { CSSTransition } from 'react-transition-group';
 import * as comp from './styled';
 import { Octokit } from '@octokit/rest';
 import ReactMarkdown from 'react-markdown'
-import test from './assets/projects/test.md';
 import basididati from './assets/projects/basididati.md';
-import basididatiLogo from './assets/projects/basididati.png';
+import basididatiLogo from './assets/images/basididati.png';
+import ingegneriadelsoftware from './assets/projects/ingegneriadelsoftware.md';
+import ingegneriadelsoftwareLogo from './assets/images/ingegneriadelsoftware.png';
 
 const ocktokit = new Octokit();
 ocktokit.repos.get({
@@ -173,6 +174,7 @@ const ProgettiUni = function (props) {
         Progetti Universitari
       </h2>
       <ProjectContainer image={basididatiLogo} markdown={basididati} />
+      <ProjectContainer image={ingegneriadelsoftwareLogo} markdown={ingegneriadelsoftware} />
     </Col>
   </comp.RowSection>
 }
@@ -181,7 +183,7 @@ function App() {
   return (
     <>
       <comp.AppWrapper className="profile-page">
-        <comp.AppContainer className="card card-profile shadow mt-0" fluid>
+        <comp.AppContainer className="card card-profile shadow mt-0 pb-5" fluid>
           <TopBar />
           <PersonalDetails />
           <OtherContacts />
@@ -189,7 +191,7 @@ function App() {
           <ProgettiUni />
         </comp.AppContainer>
       </comp.AppWrapper>
-      <comp.BgStatic/>
+    <comp.BgStatic/>
   </>);
 }
 
