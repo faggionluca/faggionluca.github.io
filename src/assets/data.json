@@ -37,5 +37,12 @@
 			"Cellulare": "3395472642",
 			"E-mail": "luca.faggion@studenti.unipr.it"
 		}
-	}
+	},
+	"repositories":[
+		{"owner": "Raider-Arts", "repo": "sphinx-uedoc-theme"},
+		{"owner": "Raider-Arts", "repo": "painter-megascan-link"},
+		{"owner": "darkimage", "repo": "react-animate-hoc"},
+		{"owner": "darkimage", "repo": "darkimage.github.io"},
+		{"owner": "darkimage", "repo": "autocad-arx"}
+	]
 }
