@@ -77,7 +77,7 @@ export const RowSection = function (props) {
 	if (props.border === "false") {
 		border = ""
 	}
-	return <Row {...props} className={`${border} mt-5 mx-4 px-5 justify-content-center ${props.className}`}>{props.children}</Row>
+	return <Row {...props} className={`${border} mt-5 mx-2 mx-md-4 px-2 px-md-5 justify-content-center ${props.className}`}>{props.children}</Row>
 }
 
 export const ProjectImg = styled.img`
@@ -85,4 +85,9 @@ export const ProjectImg = styled.img`
 	max-height: 256px;
 	width: auto;
 	height: auto;
+
+	@media only screen and (max-width: ${breakpoints.sm}){
+		max-width: 128px;
+		max-height: 128px;
+	}
 `

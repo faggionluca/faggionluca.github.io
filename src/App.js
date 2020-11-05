@@ -26,7 +26,7 @@ function _calculateAge(birthday) { // birthday is a date
 }
 
 const TopSideContainer = function(props) {
-  return <Col xs="12" className={`d-flex pt-1 pt-md-3 justify-content-center align-items-center ${props.className}`}>{props.children}</Col>
+  return <Col xs="6" className={`d-flex justify-content-center align-items-center ${props.className}`}>{props.children}</Col>
 }
 
 const Avatar = function () {
@@ -66,12 +66,12 @@ const SocialIcons = function (props) {
 
 const TopBar = function() {
   return <Row className="justify-content-center">
-      <TopSideContainer className="order-2 order-sm-2 col-sm-6 order-lg-1 col-lg-6">
+      <TopSideContainer className="pt-7 pt-md-3 order-2 order-sm-2 col-sm-6 order-lg-1 col-lg-6">
         <SocialIcons/>
       </TopSideContainer>
       <Avatar/>
-      <TopSideContainer className="order-3 order-md-3 col-sm-6 order-lg-3 col-lg-6" >
-      <a href={`mailto:${data.contact_email}`}><Button color="primary">Contact Me</Button></a>
+      <TopSideContainer className="pt-7 pt-md-3 order-3 order-md-3 col-sm-6 order-lg-3 col-lg-6" >
+        <a href={`mailto:${data.contact_email}`}><Button color="primary">Contact Me</Button></a>
       </TopSideContainer>
     </Row>
 }
@@ -139,7 +139,7 @@ const OtherContacts = function () {
 
   return <DropDownContacts>
     <Col xs="auto">{dataDesc}</Col>
-    <Col xs="auto">{dataSep}</Col>
+    <Col xs="auto" className="px-1 px-md-2">{dataSep}</Col>
     <Col xs="auto">{dataValues}</Col>
   </DropDownContacts>
 }
@@ -155,7 +155,7 @@ const WhoAmI = function (props) {
 
 const ProjectContainer = function (props) {
   return <Row className="mt-5 justify-content-center">
-    <Col xs="auto" className="p-0 position-relative d-flex justify-content-center">
+    <Col xs="12" md="12" lg="auto" className="p-0 position-relative d-flex justify-content-center">
       <comp.ProjectImg className="rounded-lg shadow overflow-hidden" alt="" src={props.image}/>
     </Col>
     <Col className="mx-5 mt-sm-3 mt-md-2 mt-lg-0">
