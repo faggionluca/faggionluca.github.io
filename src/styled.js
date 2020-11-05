@@ -91,3 +91,14 @@ export const ProjectImg = styled.img`
 		max-height: 128px;
 	}
 `
+
+export const Section = function (props) {
+	return <RowSection>
+		<Col className="justify-content-center">
+			<h2 className="mt-5 text-center">
+				{props.title}
+			</h2>
+				{props.children}
+		</Col>
+	</RowSection>
+}
