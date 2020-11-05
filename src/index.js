@@ -8,6 +8,7 @@ import { theme } from './global-components';
 import 'animate.css';
 import { faArtstation, faGithubSquare, faCuttlefish, faJs, faPython, faJava } from '@fortawesome/free-brands-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
+import { faBook } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
   faGithubSquare,
@@ -15,7 +16,8 @@ library.add(
   faCuttlefish,
   faJs,
   faPython,
-  faJava
+  faJava,
+  faBook
 );
 
 
