@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 // import { withAnimated, withAnimatedGroup } from '@darkimage/react-animate-hoc';
 import 'argon-design-system-react/src/assets/css/argon-design-system-react.css'
-import { Button ,Row ,Col, Container} from 'reactstrap';
+import { Button ,Row ,Col} from 'reactstrap';
 import photo from './assets/images/photo.jpg';
 import data from './assets/data.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -18,12 +18,34 @@ import mobdevandroid from './assets/projects/mobdevandroid.md';
 import mobdevandroidLogo from './assets/images/mobdevandroid.jpg';
 import mobdevios from './assets/projects/mobdevios.md';
 import mobdeviosLogo from './assets/images/mobdevios.png';
+import { BehaviorSubject, of } from 'rxjs';
+import { scan, concatMap } from 'rxjs/operators';
 
 const ocktokit = new Octokit();
-ocktokit.repos.get({
-  owner: "darkimage",
-  repo: "darkimage.github.io"
-}).then(value => console.log(value));
+const repositories = new BehaviorSubject([]);
+let repos = []
+
+data.repositories.forEach(repository => {
+  ocktokit.repos.get({
+    owner: repository.owner,
+    repo: repository.repo
+  }).then(value => {
+    console.log(value)
+    const repo = {
+      name: value.data.full_name,
+      description: value.data.description,
+      language: value.data.language,
+      stars: value.data.stargazers_count,
+      watchers: value.data.watchers_count,
+      fork: value.data.forks_count
+    }
+    repos.push()
+    // console.log(repos)
+    repositories.next(<Row key={repo.name}>
+      {`${repo.name}, ${repo.description}, ${repo.language}`}
+    </Row>)
+  });
+})
 
   // https://stackoverflow.com/a/21984136/6791579
 function _calculateAge(birthday) { // birthday is a date
@@ -172,32 +194,55 @@ const ProjectContainer = function (props) {
 }
 
 const ProgettiUni = function (props) {
-  return <comp.RowSection>
-    <Col className="justify-content-center">
-      <h2 className="mt-5 text-center">
-        Progetti Universitari
-      </h2>
+  return <comp.Section title="Progetti Universitari">
       <ProjectContainer image={basididatiLogo} markdown={basididati} />
       <ProjectContainer image={ingegneriadelsoftwareLogo} markdown={ingegneriadelsoftware} />
       <ProjectContainer image={mobdevandroidLogo} markdown={mobdevandroid} />
       <ProjectContainer image={mobdeviosLogo} markdown={mobdevios} />
-    </Col>
-  </comp.RowSection>
+  </comp.Section>
+}
+
+const useGithubRepos = (initialObservable) => {
+  const [repos, setRepos] = useState([]);
+  const [observable, setRepoObservable] = useState(initialObservable);
+  useEffect(() => {
+    observable.pipe(
+      concatMap(value => of(value)),
+      scan((acc, value) => [...acc, value], [])
+    ).subscribe((value) => {
+      setRepos(value);
+    });
+
+    return () => observable.unsubscribe();
+  }, [observable]);
+  return [repos, setRepoObservable]
+};
+
+const ProgettiPers = function (props) {
+  const [repos, setRepos] =  useGithubRepos(repositories);
+
+  useEffect(() => {setRepos(repositories)})
+
+  console.log("yo")
+  console.log(repos)
+  return <comp.Section title="Progetti Personali">
+    {repos}
+  </comp.Section>
 }
 
 function App() {
-  return (
-    <>
-      <comp.AppWrapper className="profile-page">
-        <comp.AppContainer className="card card-profile shadow mt-0 pb-5" fluid>
-          <TopBar />
-          <PersonalDetails />
-          <OtherContacts />
-          <WhoAmI />
-          <ProgettiUni />
-        </comp.AppContainer>
-      </comp.AppWrapper>
-    <comp.BgStatic/>
+  return (<>
+  <comp.AppWrapper className="profile-page">
+    <comp.AppContainer className="card card-profile shadow mt-0 pb-5" fluid>
+      <TopBar />
+      <PersonalDetails />
+      <OtherContacts />
+      <WhoAmI />
+      <ProgettiUni />
+      <ProgettiPers />
+    </comp.AppContainer>
+  </comp.AppWrapper>
+  <comp.BgStatic/>
   </>);
 }
 
