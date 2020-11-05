@@ -18,6 +18,6 @@ Sono stati creati **tre principali sistemi cooperanti** per gestire queste neces
  - Creazione di un **Custom Templating Engine** (Templating Classes)
 	> Utilizzato per effetuare una composizione modulare di template HTML, rendendo piu efficente la realizzazione del progetto sfruttando il riutilizzo del codice. Il sistema e' un **preprocessor** per HTML, effettivamente virualizzando il DOM Tree rendendolo programmaticalmente disponibile in codice PHP
 
-	> [Per maggiori info sul sistema](https://github.com/darkimage/Universita-Basididati#custom-templating-engine) 
+	> **[Per maggiori info sul sistema](https://github.com/darkimage/Universita-Basididati#custom-templating-engine)**
  - Creazione di **Domain Classes** per l'astrazione del DB
 
