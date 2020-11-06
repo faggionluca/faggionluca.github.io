@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 // import { withAnimated, withAnimatedGroup } from '@darkimage/react-animate-hoc';
-import 'argon-design-system-react/src/assets/css/argon-design-system-react.css'
+// import 'argon-design-system-react/src/assets/css/argon-design-system-react.min.css'
+// import 'argon-design-system-react/src/index.js'
+import './argon.scss'
 import { Button ,Row ,Col} from 'reactstrap';
 import photo from './assets/images/photo.jpg';
 import data from './assets/data.json';
@@ -204,7 +206,6 @@ const useGithubRepos = (initialObservable) => {
   const [observable, setRepoObservable] = useState(initialObservable);
   useEffect(() => {
     observable.pipe(
-      // concatMap(value => of(value)),
       scan((acc, value) => { return Object.assign({}, acc, value) }, {})
     ).subscribe((value) => {
       setRepos(value);
@@ -236,7 +237,7 @@ const ProgettiPers = function (props) {
     console.log(repos[`${value.owner}/${value.repo}`])
     return <GithubProject proj={repos[`${value.owner}/${value.repo}`]} />
   })
-  
+
   return <comp.Section title="Progetti Personali">
     <Row className="mt-5 align-items-stretch">
       {skeletals}
