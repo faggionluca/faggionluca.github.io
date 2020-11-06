@@ -18,32 +18,29 @@ import mobdevandroid from './assets/projects/mobdevandroid.md';
 import mobdevandroidLogo from './assets/images/mobdevandroid.jpg';
 import mobdevios from './assets/projects/mobdevios.md';
 import mobdeviosLogo from './assets/images/mobdevios.png';
-import { BehaviorSubject, of } from 'rxjs';
-import { scan, concatMap } from 'rxjs/operators';
+import { BehaviorSubject } from 'rxjs';
+import { scan } from 'rxjs/operators';
+import Skeleton from "react-loading-skeleton";
 
 const ocktokit = new Octokit();
 const repositories = new BehaviorSubject([]);
-let repos = []
 
 data.repositories.forEach(repository => {
   ocktokit.repos.get({
     owner: repository.owner,
     repo: repository.repo
   }).then(value => {
-    console.log(value)
+    // console.log(value)
     const repo = {
       name: value.data.full_name,
       description: value.data.description,
       language: value.data.language,
       stars: value.data.stargazers_count,
       watchers: value.data.watchers_count,
-      fork: value.data.forks_count
+      fork: value.data.forks_count,
+      url: value.data.html_url
     }
-    repos.push()
-    // console.log(repos)
-    repositories.next(<Row key={repo.name}>
-      {`${repo.name}, ${repo.description}, ${repo.language}`}
-    </Row>)
+    repositories.next({ [repo.name]: repo })
   });
 })
 
@@ -207,8 +204,8 @@ const useGithubRepos = (initialObservable) => {
   const [observable, setRepoObservable] = useState(initialObservable);
   useEffect(() => {
     observable.pipe(
-      concatMap(value => of(value)),
-      scan((acc, value) => [...acc, value], [])
+      // concatMap(value => of(value)),
+      scan((acc, value) => { return Object.assign({}, acc, value) }, {})
     ).subscribe((value) => {
       setRepos(value);
     });
@@ -218,15 +215,32 @@ const useGithubRepos = (initialObservable) => {
   return [repos, setRepoObservable]
 };
 
+const GithubProject = function (props) {
+  return <Col xs="12" md="6" lg="6" className="my-2 align-items-stretch">
+    <div className="border rounded p-4 w-100 h-100">
+      <div className={(props.proj == undefined) ? "text-nowrap" : ""}>
+        <FontAwesomeIcon icon={['fas', 'book']} />
+        <a className="font-weight-bold ml-1" href={props.proj?.url || "#"} style={(props.proj == undefined) ? { lineHeight: 1, minWidth: "200px" } : {}}>{props.proj?.name || <Skeleton className="pr-5"/>} </a>
+      </div>
+      <div className="mt-2" style={(props.proj == undefined) ? { lineHeight: 1, minWidth: "200px" } : {}}>{props.proj?.description || <Skeleton />}</div>
+    </div>
+  </Col>
+}
+
 const ProgettiPers = function (props) {
   const [repos, setRepos] =  useGithubRepos(repositories);
 
   useEffect(() => {setRepos(repositories)})
 
-  console.log("yo")
-  console.log(repos)
+  const skeletals = data.repositories.map((value, index) => {
+    console.log(repos[`${value.owner}/${value.repo}`])
+    return <GithubProject proj={repos[`${value.owner}/${value.repo}`]} />
+  })
+  
   return <comp.Section title="Progetti Personali">
-    {repos}
+    <Row className="mt-5 align-items-stretch">
+      {skeletals}
+    </Row>
   </comp.Section>
 }
 
