@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.735a884e.chunk.css",
-    "main.js": "/static/js/main.a8184d6e.chunk.js",
-    "main.js.map": "/static/js/main.a8184d6e.chunk.js.map",
+    "main.css": "/static/css/main.7ec5d20d.chunk.css",
+    "main.js": "/static/js/main.e4ba4e22.chunk.js",
+    "main.js.map": "/static/js/main.e4ba4e22.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.a5306fb7.js",
     "runtime-main.js.map": "/static/js/runtime-main.a5306fb7.js.map",
     "static/css/2.2ce0d9b2.chunk.css": "/static/css/2.2ce0d9b2.chunk.css",
-    "static/js/2.84f52def.chunk.js": "/static/js/2.84f52def.chunk.js",
-    "static/js/2.84f52def.chunk.js.map": "/static/js/2.84f52def.chunk.js.map",
+    "static/js/2.72e921e9.chunk.js": "/static/js/2.72e921e9.chunk.js",
+    "static/js/2.72e921e9.chunk.js.map": "/static/js/2.72e921e9.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.d79ab40cb7651c9585afd0f83e387180.js": "/precache-manifest.d79ab40cb7651c9585afd0f83e387180.js",
+    "precache-manifest.78497ef49aeac8294c0ea50935c362b7.js": "/precache-manifest.78497ef49aeac8294c0ea50935c362b7.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.2ce0d9b2.chunk.css.map": "/static/css/2.2ce0d9b2.chunk.css.map",
-    "static/css/main.735a884e.chunk.css.map": "/static/css/main.735a884e.chunk.css.map",
-    "static/js/2.84f52def.chunk.js.LICENSE.txt": "/static/js/2.84f52def.chunk.js.LICENSE.txt",
+    "static/css/main.7ec5d20d.chunk.css.map": "/static/css/main.7ec5d20d.chunk.css.map",
+    "static/js/2.72e921e9.chunk.js.LICENSE.txt": "/static/js/2.72e921e9.chunk.js.LICENSE.txt",
     "static/media/basididati.png": "/static/media/basididati.189f1ac0.png",
-    "static/media/bg.svg": "/static/media/bg.50ebc7be.svg",
+    "static/media/bg.svg": "/static/media/bg.3dc4956b.svg",
     "static/media/ingegneriadelsoftware.png": "/static/media/ingegneriadelsoftware.2a07b65d.png",
     "static/media/mobdevandroid.jpg": "/static/media/mobdevandroid.2b3d7279.jpg",
     "static/media/mobdevios.png": "/static/media/mobdevios.f7ff0752.png",
@@ -24,8 +24,8 @@
   "entrypoints": [
     "static/js/runtime-main.a5306fb7.js",
     "static/css/2.2ce0d9b2.chunk.css",
-    "static/js/2.84f52def.chunk.js",
-    "static/css/main.735a884e.chunk.css",
-    "static/js/main.a8184d6e.chunk.js"
+    "static/js/2.72e921e9.chunk.js",
+    "static/css/main.7ec5d20d.chunk.css",
+    "static/js/main.e4ba4e22.chunk.js"
   ]
 }
