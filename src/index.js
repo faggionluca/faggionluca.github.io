@@ -4,11 +4,12 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { ThemeProvider } from 'styled-components';
-import { theme } from './global-components';
+import { theme } from './global-vars';
 import 'animate.css';
 import { faArtstation, faGithubSquare, faCuttlefish, faJs, faPython, faJava } from '@fortawesome/free-brands-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faBook } from '@fortawesome/free-solid-svg-icons';
+import { faBook, faCodeBranch } from '@fortawesome/free-solid-svg-icons';
+import { faEye, faStar } from '@fortawesome/free-regular-svg-icons';
 
 library.add(
   faGithubSquare,
@@ -17,7 +18,10 @@ library.add(
   faJs,
   faPython,
   faJava,
-  faBook
+  faBook,
+  faCodeBranch,
+  faStar,
+  faEye
 );
 
 
