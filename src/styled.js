@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Container, Col, Row } from 'reactstrap';
-import { breakpoints } from './global-components';
+import { breakpoints } from './global-vars';
 import bg from './assets/images/bg.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
