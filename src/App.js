@@ -213,6 +213,16 @@ const useGithubRepos = (initialObservable) => {
 };
 
 const GithubProject = function (props) {
+  const bottombar = []
+  if (props.proj?.fork !== 0) {
+    bottombar.push(<Col xs="auto" className="mr-2"><FontAwesomeIcon icon={["fas", "code-branch"]} /> {props.proj?.fork}</Col>)
+  }
+  if (props.proj?.stars !== 0) {
+    bottombar.push(<Col xs="auto" className="mr-2"><FontAwesomeIcon icon={["far", "star"]} /> {props.proj?.stars}</Col>)
+  }
+  if (props.proj?.watchers !== 0) {
+    bottombar.push(<Col xs="auto" className="mr-2"><FontAwesomeIcon icon={["far", "eye"]} /> {props.proj?.watchers}</Col>)
+  }
   return <Col xs="12" md="6" lg="6" className="my-2 align-items-stretch">
     <div className="border rounded p-4 w-100 h-100">
       <div className={(props.proj === undefined) ? "text-nowrap" : ""}>
@@ -220,6 +230,9 @@ const GithubProject = function (props) {
         <a className="font-weight-bold ml-1" href={props.proj?.url || "#"} style={(props.proj === undefined) ? { lineHeight: 1, minWidth: "200px" } : {}}>{props.proj?.name || <Skeleton className="pr-5"/>} </a>
       </div>
       <div className="mt-2" style={(props.proj === undefined) ? { lineHeight: 1, minWidth: "200px" } : {}}>{props.proj?.description || <Skeleton />}</div>
+      <Row className="mt-2">
+        {bottombar}
+      </Row>
     </div>
   </Col>
 }
