@@ -1,7 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import { withAnimated, withAnimatedGroup } from '@darkimage/react-animate-hoc';
-// import 'argon-design-system-react/src/assets/css/argon-design-system-react.min.css'
-// import 'argon-design-system-react/src/index.js'
 import './argon.scss'
 import { Button ,Row ,Col} from 'reactstrap';
 import photo from './assets/images/photo.jpg';
@@ -32,7 +29,6 @@ data.repositories.forEach(repository => {
     owner: repository.owner,
     repo: repository.repo
   }).then(value => {
-    // console.log(value)
     const repo = {
       name: value.data.full_name,
       description: value.data.description,
@@ -175,7 +171,7 @@ const OtherContacts = function () {
 const WhoAmI = function (props) {
   return <comp.RowSection border="false">
       <Col xs="auto">
-        <Row className="justify-content-center" ><h2 className="text-weight-bold text-center">Who am I?</h2></Row>
+        <Row className="justify-content-center" ><h2 className="text-weight-bold text-center">Who I am?</h2></Row>
         <Row className="justify-content-center text-center">{data.whoiam}</Row>
       </Col>
     </comp.RowSection>
