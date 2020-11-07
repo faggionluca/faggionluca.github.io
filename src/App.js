@@ -215,11 +215,11 @@ const useGithubRepos = (initialObservable) => {
 const GithubProject = function (props) {
   return <Col xs="12" md="6" lg="6" className="my-2 align-items-stretch">
     <div className="border rounded p-4 w-100 h-100">
-      <div className={(props.proj == undefined) ? "text-nowrap" : ""}>
+      <div className={(props.proj === undefined) ? "text-nowrap" : ""}>
         <FontAwesomeIcon icon={['fas', 'book']} />
-        <a className="font-weight-bold ml-1" href={props.proj?.url || "#"} style={(props.proj == undefined) ? { lineHeight: 1, minWidth: "200px" } : {}}>{props.proj?.name || <Skeleton className="pr-5"/>} </a>
+        <a className="font-weight-bold ml-1" href={props.proj?.url || "#"} style={(props.proj === undefined) ? { lineHeight: 1, minWidth: "200px" } : {}}>{props.proj?.name || <Skeleton className="pr-5"/>} </a>
       </div>
-      <div className="mt-2" style={(props.proj == undefined) ? { lineHeight: 1, minWidth: "200px" } : {}}>{props.proj?.description || <Skeleton />}</div>
+      <div className="mt-2" style={(props.proj === undefined) ? { lineHeight: 1, minWidth: "200px" } : {}}>{props.proj?.description || <Skeleton />}</div>
     </div>
   </Col>
 }
