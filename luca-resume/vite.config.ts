@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+// for module ES6 import -> https://github.com/Subwaytime/vite-aliases/issues/33#issuecomment-1284408867
 import { resolve } from 'path';
 import react from '@vitejs/plugin-react';
 
