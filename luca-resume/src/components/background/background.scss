@@ -1,0 +1,15 @@
+.bg {
+  height:100%;
+  width:100%;
+  position: sticky;
+  top:0;
+}
+
+.bg-blur{
+  filter: blur(50px);
+
+  * {
+    fill: #DDE8F9;
+    // fill: red;
+  }
+}

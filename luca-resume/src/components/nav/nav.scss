@@ -1,0 +1,19 @@
+.nav-link {
+  color: #255888;
+}
+
+.nav-line {
+  box-sizing: border-box;
+  height: 1px;
+  width: 50vw;
+  position: absolute;
+  background: radial-gradient(#255888, #25588800 70%);
+  left: 50%;
+  transform: translate(-50%, -100%);
+  bottom: 0%;
+}
+
+.nav-brand {
+  width: 32px;
+  height: 32px;
+}
