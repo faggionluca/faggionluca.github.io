@@ -15,6 +15,7 @@
     "react-bootstrap": "^2.7.1",
     "react-dom": "^18.2.0",
     "react-scroll": "^1.8.9",
+    "react-use": "^17.4.0",
     "use-debounce": "^9.0.3"
   },
   "devDependencies": {

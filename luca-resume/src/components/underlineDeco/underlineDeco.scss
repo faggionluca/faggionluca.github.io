@@ -1,0 +1,14 @@
+.deco-container {
+  position: relative;
+}
+
+.deco {
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  transform: translate(0, -50%);
+  height: 10px;
+  background-color: #88DDFF;
+  margin-left: -5px;
+  margin-right: -5px;
+}
