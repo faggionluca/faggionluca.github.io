@@ -5,6 +5,14 @@ import CardDeco from '@/components/cardDeco/cardDeco';
 import photo from '@/assets/photo.png'
 import './home.scss';
 
+function HomeLinkBar() {
+  return (
+    <div className='home-link-bar d-flex flex-column align-items-md-center align-items-lg-end py-3 px-5'>
+      <a href='#CV'>Download CV</a>
+    </div> 
+  )
+}
+
 function Home() {
   return (
     <Container fluid className="home-container">
@@ -20,9 +28,7 @@ function Home() {
           <Row><h1 className='display-6 fw-bold'>an aspiring DevOps Engineer</h1></Row>
           <Row><p className='pt-3'>I’m a passionate Engineer graduate willing to learn and master new technologies with a special passion for DevOps.</p></Row>
           <Row className='w-100 justify-content-end'>
-            <div className='home-link-bar d-flex flex-column align-items-md-center align-items-lg-end py-3 px-5'>
-              <a href='#CV'>Download CV</a>
-            </div>
+            <HomeLinkBar />
           </Row>
         </Col>
         <Col md={12} lg={4}>
