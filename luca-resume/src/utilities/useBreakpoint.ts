@@ -19,7 +19,7 @@ const resolveBreakpoint = (width: number): Breakpoint => {
 	return 'xxl';
 };
 
-const useBreakpoint = () => {
+const useBreakpoint = (breakpoints?: Breakpoint[]) => {
 	const [size, setSize] = useState(() => resolveBreakpoint(window.innerWidth));
 	const update = useDebouncedCallback(() => {
 		setSize(resolveBreakpoint(window.innerWidth));
@@ -30,6 +30,9 @@ const useBreakpoint = () => {
 		return () => window.removeEventListener('resize', update);
 	}, [update]);
 
+  if (breakpoints) {
+    return breakpoints.includes(size)
+  }
 	return size;
 };
 

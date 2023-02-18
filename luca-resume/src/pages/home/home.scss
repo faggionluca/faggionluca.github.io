@@ -67,3 +67,20 @@
     max-width: 50%;
   }
 }
+
+.home-readmore {
+  padding-top: 250px;
+  font-size: 18px;
+  color: #0B9ED9;
+  a {
+    text-decoration: none;
+  }
+}
+
+.home-readmore-icon {
+  padding-top: 0.5rem;
+  filter: drop-shadow(4px 4px 8px rgba(37, 88, 136, 0.2));
+  path {
+    fill: #88DDFF;
+  }
+}

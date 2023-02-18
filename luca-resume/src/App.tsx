@@ -3,6 +3,7 @@ import './App.scss'
 import ResumeNav from '@/components/nav/nav';
 import ResumeBackground from '@/components/background/background';
 import Home from '@/pages/home/home';
+import { useRef } from 'react';
 
 function Dummy() {
   return (
@@ -12,14 +13,17 @@ function Dummy() {
 
 function App() {
 
+  const homeRef = useRef(null)
+  const pagesRef = [homeRef]
+
   return (
     <Container fluid className="px-0">
       <ResumeNav />
-      <ResumeBackground />
+      <ResumeBackground pagesRef={pagesRef} />
       <Container id="content">
-        <Home />
+        <Home ref={homeRef} />
+        <Dummy />
       </Container>
-      {/* <Dummy /> */}
     </Container>
   )
 }

@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { forwardRef, HTMLAttributes } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import UnderlineDeco from '@/components/underlineDeco/underlineDeco';
 import CardDeco from '@/components/cardDeco/cardDeco';
 import photo from '@/assets/photo.png'
 import './home.scss';
+import useBreakpoint from '@/utilities/useBreakpoint';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
+
 
 function HomeLinkBar() {
   return (
@@ -13,9 +17,33 @@ function HomeLinkBar() {
   )
 }
 
-function Home() {
+function ReadMore() {
+  const show = useBreakpoint(['lg', 'xl', 'xxl'])
+  const underlineStyle = {
+    backgroundColor: 'rgba(136, 221, 255, 0.29)'
+  }
   return (
-    <Container fluid className="home-container">
+    show && (
+      <div className='home-readmore fw-bold d-flex flex-column justify-content-center'>
+        <UnderlineDeco style={underlineStyle}>
+          <a href='#About'>Read More about me</a>
+        </UnderlineDeco>
+        <FontAwesomeIcon
+          icon={faArrowDown}
+          size="2x"
+          className="home-readmore-icon"
+        />
+      </div>
+    ) || null
+  )
+}
+
+type HomeProps = HTMLAttributes<HTMLDivElement>;
+
+const Home = forwardRef<HTMLDivElement, HomeProps>((props, ref) =>{
+
+  return (
+    <Container ref={ref} fluid className="home-container">
       <Row>
         <Col md={12} lg={8} className="home-title pe-lg-5">
           <Row><h4>Hi!</h4></Row>
@@ -33,12 +61,17 @@ function Home() {
         </Col>
         <Col md={12} lg={4}>
           <CardDeco percent={80}>
-            <div className='home-photo-container'><img src={photo} className="home-photo" alt="Resume photo" /></div>
+            <div className='home-photo-container'>
+              <img src={photo} className="home-photo" alt="Resume photo" />
+            </div>
           </CardDeco>
         </Col>
       </Row>
+      <Container fluid className='d-flex justify-content-center'>
+        <ReadMore />
+      </Container>
     </Container>
   )
-}
+}) 
 
 export default Home;

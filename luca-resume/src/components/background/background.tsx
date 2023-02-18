@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { RefObject } from 'react';
 import './background.scss';
 import {
   motion,
@@ -10,21 +10,28 @@ import {
   useMotionValue
 } from "framer-motion";
 
-
-function useParallax(value: MotionValue<number>, distance: number, offset: number = 0) {
-  return useTransform(value, [0, 1], [offset, distance]);
+type ResumeBackgroundProps = {
+  pagesRef: RefObject<HTMLElement>[]
 }
 
-function ResumeBackground() {
-  const { scrollYProgress } = useScroll();
-  const y = useParallax(scrollYProgress, -800, 100)
-  const parrallax = useSpring(y, {
+function useParallax(distance: number, offset: number = 0, target?: RefObject<HTMLElement>) {
+  const { scrollYProgress } = useScroll({target: target, offset: ["end start", "end end"]});
+  const scaledProgess = useTransform(scrollYProgress, [0, 1], [distance, offset]);
+  return useSpring(scaledProgess, {
     stiffness: 100,
     restDelta: 0.001
   })
+}
+
+function ResumeBackground(props: ResumeBackgroundProps) {
+  const { pagesRef } = props
+  const [homeRef] = pagesRef
+  
+  const homeParallax = useParallax(-200, 100, homeRef);
+
   return (
     <svg className='bg-blur bg' viewBox='0 0 100 100'>
-      <motion.ellipse cx="50" cy={parrallax} rx="120" ry="50"/>
+      <motion.ellipse cx="50" cy={homeParallax} rx="120" ry="50"/>
     </svg>
   )
 }
