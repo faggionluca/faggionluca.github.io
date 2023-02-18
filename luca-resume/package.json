@@ -14,9 +14,12 @@
     "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.3",
     "framer-motion": "^9.0.2",
+    "i18next": "^22.4.10",
+    "i18next-browser-languagedetector": "^7.0.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.1",
     "react-dom": "^18.2.0",
+    "react-i18next": "^12.1.5",
     "react-scroll": "^1.8.9",
     "react-use": "^17.4.0",
     "use-debounce": "^9.0.3"

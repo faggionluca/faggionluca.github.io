@@ -1,0 +1,17 @@
+{
+  "translations": {
+    "common":{
+      "about": "Profilo",
+      "skills": "Skills",
+      "contactme": "Contattami"
+    },
+    "home" : {
+      "hi": "Ciao!",
+      "im": "Sono",
+      "titleDesc": "un aspirante ingegnere DevOps",
+      "titleSubText": "Sono un appassionato laureato in ingegneria disposto a imparare e padroneggiare nuove tecnologie, con una passione speciale per il DevOps.",
+      "readmore": "Continua a conoscermi",
+      "downloadcv": "Scarica CV"
+    }
+  }
+}

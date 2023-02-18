@@ -1,0 +1,17 @@
+{
+  "translations": {
+    "common":{
+      "about": "About",
+      "skills": "Skills",
+      "contactme": "Contact Me"
+    },
+    "home" : {
+      "hi": "Hi!",
+      "im": "I'm",
+      "titleDesc": "an aspiring DevOps Engineer",
+      "titleSubText": "I’m a passionate Engineer graduate willing to learn and master new technologies with a special passion for DevOps.",
+      "readmore": "Read more about me",
+      "downloadcv": "Download CV"
+    }
+  }
+}

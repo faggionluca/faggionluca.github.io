@@ -7,26 +7,30 @@ import './home.scss';
 import useBreakpoint from '@/utilities/useBreakpoint';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
-
+import { useTranslation } from 'react-i18next';
 
 function HomeLinkBar() {
+  const { t } = useTranslation('translations', { keyPrefix: 'home' })
+  
   return (
     <div className='home-link-bar d-flex flex-column align-items-md-center align-items-lg-end py-3 px-5'>
-      <a href='#CV'>Download CV</a>
+      <a href='#CV'>{t("downloadcv")}</a>
     </div> 
   )
 }
 
 function ReadMore() {
+  const { t } = useTranslation('translations', { keyPrefix: 'home' } )
   const show = useBreakpoint(['lg', 'xl', 'xxl'])
   const underlineStyle = {
     backgroundColor: 'rgba(136, 221, 255, 0.29)'
   }
+
   return (
     show && (
       <div className='home-readmore fw-bold d-flex flex-column justify-content-center'>
         <UnderlineDeco style={underlineStyle}>
-          <a href='#About'>Read More about me</a>
+          <a href='#About'>{t("readmore")}</a>
         </UnderlineDeco>
         <FontAwesomeIcon
           icon={faArrowDown}
@@ -41,20 +45,21 @@ function ReadMore() {
 type HomeProps = HTMLAttributes<HTMLDivElement>;
 
 const Home = forwardRef<HTMLDivElement, HomeProps>((props, ref) =>{
+  const { t } = useTranslation('translations', { keyPrefix: 'home' } )
 
   return (
     <Container ref={ref} fluid className="home-container" {...props}>
       <Row>
         <Col md={12} lg={8} className="home-title pe-lg-5">
-          <Row><h4>Hi!</h4></Row>
+          <Row><h4>{t('hi')}</h4></Row>
           <Row className='flex-nowrap align-items-start'>
-            <h1 className='display-5 fw-bold flex-shrink-1 pe-0'>I'm</h1>
+            <h1 className='display-5 fw-bold flex-shrink-1 pe-0'>{t('im')}</h1>
             <UnderlineDeco className='me-auto'>
               <h1 className='display-5 fw-bold'>Luca Faggion.</h1>
             </UnderlineDeco>
           </Row>
-          <Row><h1 className='display-6 fw-bold'>an aspiring DevOps Engineer</h1></Row>
-          <Row><p className='pt-3'>I’m a passionate Engineer graduate willing to learn and master new technologies with a special passion for DevOps.</p></Row>
+          <Row><h1 className='display-6 fw-bold'>{t('titleDesc')}</h1></Row>
+          <Row><p className='pt-3'>{t('titleSubText')}</p></Row>
           <Row className='w-100 justify-content-end'>
             <HomeLinkBar />
           </Row>
