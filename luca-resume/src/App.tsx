@@ -1,13 +1,13 @@
-import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import React, { useRef } from 'react';
+import { Container } from 'react-bootstrap';
 import './App.scss'
 import ResumeNav from '@/components/nav/nav';
 import ResumeBackground from '@/components/background/background';
 import Home from '@/pages/home/home';
-import { useRef } from 'react';
 
 function Dummy() {
   return (
-    <div style={{height: '400vh'}}>tets</div>
+    <div style={{ height: '400vh' }}>tets</div>
   )
 }
 

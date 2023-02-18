@@ -6,9 +6,11 @@ type AboutProps = HTMLAttributes<HTMLDivElement>
 
 const About = forwardRef<HTMLDivElement, AboutProps>((props, ref) => {
   return (
-    <Container fluid {...props}>
+    <Container fluid {...props} ref={ref}>
     </Container>
   )
 })
+
+About.displayName = 'About';
 
 export default About;

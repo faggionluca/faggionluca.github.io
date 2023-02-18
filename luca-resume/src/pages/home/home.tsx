@@ -11,16 +11,16 @@ import { useTranslation } from 'react-i18next';
 
 function HomeLinkBar() {
   const { t } = useTranslation('translations', { keyPrefix: 'home' })
-  
+
   return (
     <div className='home-link-bar d-flex flex-column align-items-md-center align-items-lg-end py-3 px-5'>
       <a href='#CV'>{t("downloadcv")}</a>
-    </div> 
+    </div>
   )
 }
 
 function ReadMore() {
-  const { t } = useTranslation('translations', { keyPrefix: 'home' } )
+  const { t } = useTranslation('translations', { keyPrefix: 'home' })
   const show = useBreakpoint(['lg', 'xl', 'xxl'])
   const underlineStyle = {
     backgroundColor: 'rgba(136, 221, 255, 0.29)'
@@ -44,8 +44,8 @@ function ReadMore() {
 
 type HomeProps = HTMLAttributes<HTMLDivElement>;
 
-const Home = forwardRef<HTMLDivElement, HomeProps>((props, ref) =>{
-  const { t } = useTranslation('translations', { keyPrefix: 'home' } )
+const Home = forwardRef<HTMLDivElement, HomeProps>((props, ref) => {
+  const { t } = useTranslation('translations', { keyPrefix: 'home' })
 
   return (
     <Container ref={ref} fluid className="home-container" {...props}>
@@ -67,7 +67,7 @@ const Home = forwardRef<HTMLDivElement, HomeProps>((props, ref) =>{
         <Col md={12} lg={4}>
           <CardDeco percent={80}>
             <div className='home-photo-container'>
-              <img src={photo} className="home-photo" alt="Resume photo" />
+              <img src={photo} className="home-photo" alt="resume" />
             </div>
           </CardDeco>
         </Col>
@@ -77,6 +77,8 @@ const Home = forwardRef<HTMLDivElement, HomeProps>((props, ref) =>{
       </Container>
     </Container>
   )
-}) 
+})
+
+Home.displayName = 'Home';
 
 export default Home;
