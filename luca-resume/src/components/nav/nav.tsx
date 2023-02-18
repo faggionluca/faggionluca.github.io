@@ -12,7 +12,7 @@ function NavLine() {
 function ResumeNav() {
   return (
     <Navbar sticky="top" expand="md">
-      <Container fluid className="mx-5 py-3">
+      <Container fluid className="mx-1 mx-md-5 py-3">
         <Navbar.Brand href="#home"><img src={brand} className="nav-brand" alt="Resume Logo" /></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
