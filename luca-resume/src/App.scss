@@ -1,4 +1,4 @@
-$primary: #0B9ED9;
+$primary: #0b9ed9;
 
 $body-color: #082032;
 
@@ -6,15 +6,20 @@ $min-contrast-ratio: 3;
 
 $font-family-base: 'Arial, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"';
 
-$body-bg: #EEF7FF;
+$body-bg: #eef7ff;
 
 @import "~bootstrap/scss/bootstrap";
 
 body {
-  background: linear-gradient(#EEF7FF, #F2F3FF);
+  background: linear-gradient(#eef7ff, #f2f3ff);
   background-attachment: fixed;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: #255888;
 }

@@ -1,11 +1,11 @@
 {
   "translations": {
-    "common":{
+    "common": {
       "about": "About",
       "skills": "Skills",
       "contactme": "Contact Me"
     },
-    "home" : {
+    "home": {
       "hi": "Hi!",
       "im": "I'm",
       "titleDesc": "an aspiring DevOps Engineer",

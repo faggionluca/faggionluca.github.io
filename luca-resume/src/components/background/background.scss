@@ -1,16 +1,16 @@
 .bg {
-  height:100%;
-  width:100%;
+  height: 100%;
+  width: 100%;
   position: fixed;
   top: 0;
   z-index: -1;
 }
 
-.bg-blur{
+.bg-blur {
   filter: blur(50px);
 
   * {
-    fill: #DDE8F9;
+    fill: #dde8f9;
     // fill: red;
   }
 }

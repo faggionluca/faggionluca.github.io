@@ -15,13 +15,16 @@
   }
 }
 
-
-.carddeco-box{
+.carddeco-box {
   position: absolute;
   bottom: 0;
   left: 50%;
   z-index: -1;
-  background: linear-gradient(180deg, rgba(136, 221, 255, 0.12) 0%, rgba(11, 158, 217, 0.12) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(136, 221, 255, 0.12) 0%,
+    rgba(11, 158, 217, 0.12) 100%
+  );
   border-radius: 20px 20px 0 0;
   transform: translate(-50%, 0);
 }
