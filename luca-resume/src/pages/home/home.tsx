@@ -43,7 +43,7 @@ type HomeProps = HTMLAttributes<HTMLDivElement>;
 const Home = forwardRef<HTMLDivElement, HomeProps>((props, ref) =>{
 
   return (
-    <Container ref={ref} fluid className="home-container">
+    <Container ref={ref} fluid className="home-container" {...props}>
       <Row>
         <Col md={12} lg={8} className="home-title pe-lg-5">
           <Row><h4>Hi!</h4></Row>
