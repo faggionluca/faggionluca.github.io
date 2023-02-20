@@ -2,7 +2,6 @@ import React, { RefObject } from "react";
 import "./background.scss";
 import {
   motion,
-  MotionValue,
   useScroll,
   useSpring,
   useTransform,
