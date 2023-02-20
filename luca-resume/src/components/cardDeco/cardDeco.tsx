@@ -14,6 +14,7 @@ function CardDeco({
   children,
   className,
   percent = 100,
+  style,
   ...rest
 }: CardDecoProps) {
   const [childRef, { height, width }] = useMeasure();
@@ -28,8 +29,10 @@ function CardDeco({
     width: width,
   };
 
+  const containerStyle = { height: height, ...style };
+
   return (
-    <div className={classNameContainer} {...rest}>
+    <div className={classNameContainer} style={containerStyle} {...rest}>
       {childClone}
       <div className="carddeco-box" style={decoStyle}></div>
     </div>

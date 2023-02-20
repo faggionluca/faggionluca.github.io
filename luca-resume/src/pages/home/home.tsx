@@ -28,16 +28,25 @@ function ReadMore() {
 
   return (
     (show && (
-      <div className="home-readmore fw-bold d-flex flex-column justify-content-center">
-        <UnderlineDeco style={underlineStyle}>
-          <a href="#About">{t("readmore")}</a>
-        </UnderlineDeco>
-        <FontAwesomeIcon
-          icon={faArrowDown}
-          size="2x"
-          className="home-readmore-icon"
-        />
-      </div>
+      <Row>
+        <Col className="home-readmore fw-bold">
+          <Row>
+            <UnderlineDeco
+              style={underlineStyle}
+              className="align-items-center flex-column"
+            >
+              <a href="#About">{t("readmore")}</a>
+            </UnderlineDeco>
+          </Row>
+          <Row>
+            <FontAwesomeIcon
+              icon={faArrowDown}
+              size="2x"
+              className="home-readmore-icon"
+            />
+          </Row>
+        </Col>
+      </Row>
     )) ||
     null
   );
@@ -79,9 +88,7 @@ const Home = forwardRef<HTMLDivElement, HomeProps>((props, ref) => {
           </CardDeco>
         </Col>
       </Row>
-      <Container fluid className="d-flex justify-content-center">
-        <ReadMore />
-      </Container>
+      <ReadMore />
     </Container>
   );
 });
