@@ -1,0 +1,36 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/maps";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/utilities";
+
+
+@include media-breakpoint-up(lg) {
+  .page-padding {
+    padding-top: 125px !important;
+  }
+}
+
+.skills-art {
+  position: absolute;
+  bottom: -35px;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.skills-art-container {
+  position: relative;
+  overflow: visible;
+  height: 250px;
+  width: 250px;
+  margin-top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@include media-breakpoint-up(lg) {
+  .skills-art-container {
+    margin-top: 0;
+  }
+}
