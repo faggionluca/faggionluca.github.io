@@ -14,11 +14,10 @@ h6 {
   color: #255888;
 }
 
-@include media-breakpoint-up(lg) {
-  .page {
-    height: 90vh;
-  }
+.page {
+  min-height: 90vh;
 }
+
 
 @include media-breakpoint-up(md) {
   .page-padding {
