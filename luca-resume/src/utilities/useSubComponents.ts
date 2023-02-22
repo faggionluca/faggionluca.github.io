@@ -1,5 +1,4 @@
-import React, { isValidElement, ReactPortal } from "react";
-import { ReactNode, ReactElement } from "react";
+import React, { isValidElement, ReactNode } from 'react';
 
 function useSubComponents<T>(children: ReactNode, childElements: T) {
   // const subComponentList = Object.keys(elem);
@@ -7,11 +6,12 @@ function useSubComponents<T>(children: ReactNode, childElements: T) {
     const subComponents = Object.fromEntries(
       childElements.map((key) => {
         const keySubComps = React.Children.map(children, (child) => {
-          if (isValidElement(child) && typeof child.type !== "string")
+          if (isValidElement(child) && typeof child.type !== 'string')
+            /* eslint-disable @typescript-eslint/no-explicit-any */
             return (child as any)?.type.displayName === key ? child : null;
         });
         return [key, keySubComps];
-      })
+      }),
     );
     return subComponents;
   }

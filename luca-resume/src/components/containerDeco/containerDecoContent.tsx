@@ -1,7 +1,6 @@
-import React, { ImgHTMLAttributes } from "react";
-import { forwardRef, HTMLAttributes, PropsWithChildren } from "react";
+import React, { forwardRef, HTMLAttributes, PropsWithChildren } from "react";
 import "./containerDecoContent.scss";
-import { Col, ColProps, Stack, StackProps } from "react-bootstrap";
+import { Col, ColProps } from "react-bootstrap";
 
 type ContainerDecoIconProps = PropsWithChildren<
   HTMLAttributes<HTMLDivElement> & ColProps

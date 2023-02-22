@@ -1,5 +1,4 @@
-import React, { ImgHTMLAttributes, RefObject } from "react";
-import { forwardRef, HTMLAttributes, PropsWithChildren } from "react";
+import React, { ImgHTMLAttributes, forwardRef, HTMLAttributes } from "react";
 import { useMeasure } from "react-use";
 import "./containerDecoIcon.scss";
 
@@ -24,8 +23,10 @@ export const ContainerDecoIcon = forwardRef<
   return (
     <div ref={ref} style={imgContainerStyle} className="container-deco-icon">
       <img
+        /* eslint-disable @typescript-eslint/no-explicit-any */
         ref={imgRef as any}
         className="container-deco-icon-image"
+        alt="deco-icon"
         src={icon}
       />
     </div>

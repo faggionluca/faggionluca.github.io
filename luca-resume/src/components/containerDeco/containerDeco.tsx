@@ -1,18 +1,14 @@
 import React, {
-  ComponentType,
   forwardRef,
-  ForwardRefExoticComponent,
   HTMLAttributes,
-  isValidElement,
   PropsWithChildren,
-  ReactElement,
   ReactNode,
 } from "react";
 import "./containerDeco.scss";
 import useSubComponents from "@/utilities/useSubComponents";
 import { ContainerDecoIcon } from "./containerDecoIcon";
 import { ContainerDecoContent } from "./containerDecoContent";
-import { Col, Container, ContainerProps, Row, Stack } from "react-bootstrap";
+import { Col, Container, ContainerProps, Row } from "react-bootstrap";
 
 type ContainerDecoSubComponents = {
   Icon?: ReactNode | null;
@@ -45,6 +41,8 @@ const ContainerDecoWithRef = forwardRef<HTMLDivElement, ContainerDecoProps>(
     );
   }
 );
+
+ContainerDecoWithRef.displayName = "ContainerDeconWithRef"
 
 const ContainerDeco = Object.assign(ContainerDecoWithRef, {
   Icon: ContainerDecoIcon,
