@@ -14,8 +14,10 @@ h6 {
   color: #255888;
 }
 
-.page {
-  height: 90vh;
+@include media-breakpoint-up(lg) {
+  .page {
+    height: 90vh;
+  }
 }
 
 @include media-breakpoint-up(md) {
