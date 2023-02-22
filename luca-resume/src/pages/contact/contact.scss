@@ -1,0 +1,44 @@
+.thanks-row {
+  padding-top: 50px;
+}
+
+@include media-breakpoint-up(lg) {
+  .thanks-row {
+    padding-top: 250px;
+  }
+}
+
+
+.contact-art-card {
+  margin-top: 100px;
+}
+
+@include media-breakpoint-up(lg) {
+  .contact-art-card {
+    margin-top: 0;
+  }
+}
+
+.contact-art {
+  position: absolute;
+  // bottom: -5px;
+  width: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.contact-art-container {
+  position: relative;
+  overflow: visible;
+  height: 250px;
+  width: 250px;
+  // margin-top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@include media-breakpoint-up(lg) {
+  .contact-art-container {
+    margin-top: 0;
+  }
+}

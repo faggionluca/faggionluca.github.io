@@ -42,7 +42,7 @@ const ContainerDecoWithRef = forwardRef<HTMLDivElement, ContainerDecoProps>(
   }
 );
 
-ContainerDecoWithRef.displayName = "ContainerDeconWithRef"
+ContainerDecoWithRef.displayName = "ContainerDeconWithRef";
 
 const ContainerDeco = Object.assign(ContainerDecoWithRef, {
   Icon: ContainerDecoIcon,

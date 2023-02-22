@@ -1,7 +1,7 @@
-import { defineConfig } from "vite";
+import { defineConfig } from 'vite';
 // for module ES6 import -> https://github.com/Subwaytime/vite-aliases/issues/33#issuecomment-1284408867
-import { resolve } from "path";
-import react from "@vitejs/plugin-react";
+import { resolve } from 'path';
+import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -15,10 +15,17 @@ export default defineConfig({
       usePolling: true,
     },
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: '@import "@/variables.scss";',
+      },
+    },
+  },
   resolve: {
     alias: {
-      "~bootstrap": resolve(__dirname, "node_modules/bootstrap"),
-      "@": resolve(__dirname, "src"),
+      '~bootstrap': resolve(__dirname, 'node_modules/bootstrap'),
+      '@': resolve(__dirname, 'src'),
     },
   },
 });

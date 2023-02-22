@@ -1,15 +1,27 @@
 import React from "react";
-import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import { Button, Container, Nav, Navbar, NavbarProps } from "react-bootstrap";
 import "./nav.scss";
 import brand from "@/assets/brand.svg";
-import { useTranslation } from "react-i18next";
+import { Link } from "react-scroll";
+
+type ResumeNavItem = {
+  name: string,
+  type: 'link' | "button"
+  scrollTo: string
+}
+
+type NavBaseProps = {
+  items: Array<ResumeNavItem>
+}
+
+export type NavProps = Omit<NavbarProps, "children"> & NavBaseProps
 
 function NavLine() {
   return <div className="nav-line"></div>;
 }
 
-function ResumeNav() {
-  const { t } = useTranslation("translations", { keyPrefix: "common" });
+function ResumeNav(props: NavProps) {
+  const { items } = props
 
   return (
     <Navbar sticky="top" expand="md">
@@ -20,15 +32,19 @@ function ResumeNav() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link className="mx-3" href="#home">
-              {t("about")}
-            </Nav.Link>
-            <Nav.Link className="mx-3" href="#link">
-              {t("skills")}
-            </Nav.Link>
-            <Button variant="primary" className="mx-3 fw-bold">
-              {t("contactme")}
-            </Button>
+            {
+              items.map((item, index) => (
+                item.type === 'link' ? (
+                  <Nav.Link as="div" key={index} className="mx-3 pe-auto cursor-pointer">
+                    <Link to={item.scrollTo} offset={-50}>{item.name}</Link>
+                  </Nav.Link>
+                ) : (
+                  <Button key={index} variant="primary" className="mx-3 fw-bold">
+                    <Link to={item.scrollTo} offset={-50}>{item.name}</Link>
+                  </Button>
+                )
+              ))
+            }
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -1,5 +1,5 @@
-import React, { forwardRef, HTMLAttributes } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import React, { forwardRef } from "react";
+import { Col, Container, ContainerProps, Row } from "react-bootstrap";
 import UnderlineDeco from "@/components/underlineDeco/underlineDeco";
 import CardDeco from "@/components/cardDeco/cardDeco";
 import photo from "@/assets/photo.png";
@@ -8,6 +8,7 @@ import useBreakpoint from "@/utilities/useBreakpoint";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
+import { Link } from 'react-scroll';
 
 function HomeLinkBar() {
   const { t } = useTranslation("translations", { keyPrefix: "home" });
@@ -35,7 +36,9 @@ function ReadMore() {
               style={underlineStyle}
               className="align-items-center flex-column"
             >
-              <a href="#About">{t("readmore")}</a>
+              <span className="cursor-pointer">
+                <Link to="about" offset={-50}>{t("readmore")}</Link>
+              </span>
             </UnderlineDeco>
           </Row>
           <Row>
@@ -52,7 +55,7 @@ function ReadMore() {
   );
 }
 
-type HomeProps = HTMLAttributes<HTMLDivElement>;
+type HomeProps = Omit<ContainerProps, "children">;
 
 const Home = forwardRef<HTMLDivElement, HomeProps>((props, ref) => {
   const { t } = useTranslation("translations", { keyPrefix: "home" });

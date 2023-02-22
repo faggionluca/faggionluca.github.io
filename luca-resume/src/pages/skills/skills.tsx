@@ -63,7 +63,7 @@ const Skills = forwardRef<HTMLDivElement, SkillsProps>((props, ref) => {
   const { t } = useTranslation("translations", { keyPrefix: "skills" });
 
   return (
-    <Container fluid {...props} ref={ref} className="pt-5 page-padding">
+    <Container fluid {...props} ref={ref}>
       <Row>
         <Row>
           <Stack gap={4}>

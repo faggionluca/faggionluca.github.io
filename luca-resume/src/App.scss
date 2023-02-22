@@ -1,14 +1,4 @@
-$primary: #0b9ed9;
-
-$body-color: #082032;
-
-$min-contrast-ratio: 3;
-
-$font-family-base: 'Arial, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"';
-
-$body-bg: #eef7ff;
-
-@import "~bootstrap/scss/bootstrap";
+@import "bootstrap.scss";
 
 body {
   background: linear-gradient(#eef7ff, #f2f3ff);
@@ -22,4 +12,27 @@ h4,
 h5,
 h6 {
   color: #255888;
+}
+
+.page {
+  height: 90vh;
+}
+
+@include media-breakpoint-up(md) {
+  .page-padding {
+    padding-top: 125px;
+    padding-bottom: 125px;
+  }
+}
+
+
+@include media-breakpoint-up(sm) {
+  .page-padding {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+.end-padding {
+  padding-bottom: 125px !important;
 }

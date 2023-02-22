@@ -4,6 +4,7 @@ import "./cardDeco.scss";
 
 type CardDecoBaseProps = {
   percent?: number;
+  design?: "box" | "abstract";
 };
 
 type CardDecoProps = PropsWithChildren<
@@ -14,6 +15,7 @@ function CardDeco({
   children,
   className,
   percent = 100,
+  design = "box",
   style,
   ...rest
 }: CardDecoProps) {
@@ -24,7 +26,7 @@ function CardDeco({
     ref: childRef,
   });
 
-  const decoStyle = {
+  const decoStyleBox = {
     height: (height / 100) * percent,
     width: width,
   };
@@ -34,7 +36,15 @@ function CardDeco({
   return (
     <div className={classNameContainer} style={containerStyle} {...rest}>
       {childClone}
-      <div className="carddeco-box" style={decoStyle}></div>
+      {design === "box" && (
+        <div className="carddeco carddeco-box" style={decoStyleBox}></div>
+      )}
+      {design === "abstract" && (
+        <>
+          <div className="carddeco carddeco-abstract-1"></div>
+          <div className="carddeco carddeco-abstract-2"></div>
+        </>
+      )}
     </div>
   );
 }

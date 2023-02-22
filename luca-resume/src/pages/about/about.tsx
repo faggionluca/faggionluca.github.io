@@ -1,12 +1,12 @@
-import React, { forwardRef, HTMLAttributes } from "react";
-import { Col, Container, Row, Stack } from "react-bootstrap";
+import React, { forwardRef } from "react";
+import { Col, Container, ContainerProps, Row, Stack } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import Timeline, { TimelineBaseProps } from "@/components/timeline/timeline";
 import "./about.scss";
 import CardDeco from "@/components/cardDeco/cardDeco";
 import clip1468 from "@/assets/clip-1468.png";
 
-type AboutProps = HTMLAttributes<HTMLDivElement>;
+type AboutProps = Omit<ContainerProps, "children">;
 
 const About = forwardRef<HTMLDivElement, AboutProps>((props, ref) => {
   const { t } = useTranslation("translations", { keyPrefix: "about" });
@@ -37,7 +37,7 @@ const About = forwardRef<HTMLDivElement, AboutProps>((props, ref) => {
   ];
 
   return (
-    <Container fluid {...props} ref={ref} className="pt-5 pt-lg-2">
+    <Container fluid ref={ref} {...props}>
       <Stack gap={4}>
         <h1 className="display-5 fw-bold">{t("title")}</h1>
         <p>{t("desc")}</p>
