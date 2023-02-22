@@ -1,41 +1,66 @@
-import React, { forwardRef, HTMLAttributes } from "react";
+import React, { forwardRef, HTMLAttributes, ReactElement } from "react";
 import "./skills.scss";
 import { Container, Row, Col, Stack } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
-import clipComputer from '@/assets/clip-computer-repair-2.png';
-import CardDeco from '@/components/cardDeco/cardDeco';
+import clipComputer from "@/assets/clip-computer-repair-2.png";
+import CardDeco from "@/components/cardDeco/cardDeco";
 import ContainerDeco from "@/components/containerDeco/containerDeco";
 import pythonIcon from "@/assets/pythonicon.png";
 import jsIcon from "@/assets/jsicon.png";
+import djangoIcon from "@/assets/djangoicon.png";
+import nodeIcon from "@/assets/nodeicon.png";
+import dockerIcon from "@/assets/dockerIcon.png";
+import useBreakpoint from "@/utilities/useBreakpoint";
 
 type SkillsProps = HTMLAttributes<HTMLDivElement>;
 
-function Languages() {
+type SkillsDecoBaseProps = {
+  data: Array<{ icon: string; name: ReactElement | string }>;
+};
 
-  const languages = [
-    { icon: pythonIcon, name: 'Python' },
-    { icon: jsIcon, name: 'Javascript' },
-  ]
+type SkillsDecoProps = Omit<HTMLAttributes<HTMLDivElement>, "children>"> &
+  SkillsDecoBaseProps;
+
+function SkillsDecos(props: SkillsDecoProps) {
+  const { data, ...rest } = props;
+
+  const breakpoint = useBreakpoint(["lg", "xl", "xxl"]);
+  const colClasses = "col-lg-auto col-12 pt-xl-2";
 
   return (
-    <Row>
-      {languages.map((language, index) => (
-        <Col className={`col-md-auto col-12 ${index !== 0 && 'pt-5'} pt-xl-2`} key={index}>
+    <Row {...rest}>
+      {data.map((value, index) => (
+        <Col
+          className={`${colClasses} ${
+            breakpoint ? "pt-5" : index !== 0 ? "pt-5" : "pt-2"
+          }`}
+          key={index}
+        >
           <ContainerDeco>
-            <ContainerDeco.Icon icon={language.icon} />
+            <ContainerDeco.Icon icon={value.icon} />
             <ContainerDeco.Content className="align-items-center d-flex">
-              {language.name}
+              {value.name}
             </ContainerDeco.Content>
           </ContainerDeco>
         </Col>
       ))}
     </Row>
-  )
+  );
 }
 
 const Skills = forwardRef<HTMLDivElement, SkillsProps>((props, ref) => {
+  const languages = [
+    { icon: pythonIcon, name: "Python" },
+    { icon: jsIcon, name: "Javascript" },
+  ];
 
-  const { t } = useTranslation('translations', { keyPrefix: 'skills' })
+  const frameworks = [
+    { icon: djangoIcon, name: "Django" },
+    { icon: nodeIcon, name: "Node" },
+    { icon: dockerIcon, name: "Docker" },
+  ];
+
+  const { t } = useTranslation("translations", { keyPrefix: "skills" });
 
   return (
     <Container fluid {...props} ref={ref} className="pt-5 page-padding">
@@ -51,7 +76,7 @@ const Skills = forwardRef<HTMLDivElement, SkillsProps>((props, ref) => {
             <Stack gap={4}>
               <h5 className="fw-bold pt-4">{t("subtitle")}</h5>
               <p>{t("langDesc")}</p>
-              <Languages />
+              <SkillsDecos data={languages} className="px-5" />
             </Stack>
           </Col>
           <Col className="col-12 col-md-4">
@@ -61,6 +86,18 @@ const Skills = forwardRef<HTMLDivElement, SkillsProps>((props, ref) => {
               </div>
             </CardDeco>
           </Col>
+        </Row>
+        <Row className="pt-5">
+          <Stack gap={4}>
+            <h1 className="text-end display-5 fw-bold">
+              {t("frameworkTitle")}
+            </h1>
+            <p className="text-end">{t("frameworkDesc")}</p>
+            <SkillsDecos
+              data={frameworks}
+              className="justify-content-end pt-2 px-5"
+            />
+          </Stack>
         </Row>
       </Row>
     </Container>
