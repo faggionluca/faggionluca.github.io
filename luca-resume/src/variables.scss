@@ -10,11 +10,6 @@ $font-family-base: 'Arial, system-ui, -apple-system, "Segoe UI", Roboto, "Helvet
 
 $body-bg: #eef7ff;
 
-
-@import "~bootstrap/scss/mixins/banner";
-@include bsBanner("");
-
-
 // scss-docs-start import-stack
 // Configuration
 @import "~bootstrap/scss/variables";
