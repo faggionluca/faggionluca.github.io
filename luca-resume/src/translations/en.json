@@ -12,6 +12,25 @@
       "titleSubText": "I’m a passionate Engineer graduate willing to learn and master new technologies with a special passion for DevOps.",
       "readmore": "Read more about me",
       "downloadcv": "Download CV"
+    },
+    "about": {
+      "title": "About me",
+      "desc": "As a recent graduate from Università di Parma with a Laurea in Ingegneria Informatica, Elettronica e Telecomunicazioni, I am eager to start my career in the technology industry. Through various academic projects, I have honed my skills and developed a keen eye for detail and a deep understanding of software development methodologies. I am a team player who values open communication and collaboration, and I am eager to quickly adapt to new challenges and make meaningful contributions to a team. I am excited to learn and work with cutting-edge technologies and help drive innovation and progress in the field.",
+      "historyTitle": "Education History"
+    },
+    "skills": {
+      "title": "Skills",
+      "desc": "From my academic background and practical experience, I have developed a wide range of technical and soft skills that I am eager to bring to a new role.",
+      "subtitle": "Languages",
+      "langDesc": "These are the languages that I have acquired the most expertise in, and I am confident in my ability to use them effectively in a professional setting.",
+      "frameworkTitle": "Frameworks and Technologies",
+      "frameworkDesc": "With a solid background in my studies, I have gained proficiency in various frameworks and technologies. This expertise, combined with my problem-solving skills and attention to detail, allows me to confidently use them in a professional setting to deliver successful results."
+    },
+    "contact": {
+      "title": "Contact me",
+      "thankyou": "Thank you for visiting!",
+      "github": "personal GitHub",
+      "my": "my"
     }
   }
 }
