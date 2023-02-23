@@ -8,10 +8,10 @@ import useBreakpoint from "@/utilities/useBreakpoint";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
-import { Link } from 'react-scroll';
+import { Link } from "react-scroll";
 import i18n from "@/i18n";
-import cvEng from '@/assets/luca-faggion-cv-en.pdf';
-import cvIta from '@/assets/luca-faggion-cv-it.pdf';
+import cvEng from "@/assets/luca-faggion-cv-en.pdf";
+import cvIta from "@/assets/luca-faggion-cv-it.pdf";
 
 function HomeLinkBar() {
   const { t } = useTranslation("translations", { keyPrefix: "home" });
@@ -44,7 +44,9 @@ function ReadMore() {
               className="align-items-center flex-column"
             >
               <span className="cursor-pointer">
-                <Link to="about" offset={-50}>{t("readmore")}</Link>
+                <Link to="about" offset={-50}>
+                  {t("readmore")}
+                </Link>
               </span>
             </UnderlineDeco>
           </Row>

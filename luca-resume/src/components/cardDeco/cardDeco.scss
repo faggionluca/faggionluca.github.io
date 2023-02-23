@@ -12,9 +12,11 @@
 .carddeco {
   position: absolute;
   z-index: -1;
-  background: linear-gradient(180deg,
-      rgba(136, 221, 255, 0.12) 0%,
-      rgba(11, 158, 217, 0.12) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(136, 221, 255, 0.12) 0%,
+    rgba(11, 158, 217, 0.12) 100%
+  );
 }
 
 .carddeco-box {

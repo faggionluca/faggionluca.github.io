@@ -14,7 +14,6 @@ function Dummy() {
 }
 
 function App() {
-
   const { t } = useTranslation("translations", { keyPrefix: "common" });
 
   const homeRef = useRef(null);
@@ -23,11 +22,11 @@ function App() {
   const contactRef = useRef(null);
   const pagesRef = [homeRef, aboutRef, skillsRef, contactRef];
 
-  const navItems: NavProps['items'] = [
-    { name: t('about'), type: 'link', scrollTo: "about" },
-    { name: t('skills'), type: 'link', scrollTo: "skills" },
-    { name: t('contactme'), type: 'button', scrollTo: "contact" },
-  ]
+  const navItems: NavProps["items"] = [
+    { name: t("about"), type: "link", scrollTo: "about" },
+    { name: t("skills"), type: "link", scrollTo: "skills" },
+    { name: t("contactme"), type: "button", scrollTo: "contact" },
+  ];
 
   return (
     <Container fluid className="px-0">
@@ -37,7 +36,11 @@ function App() {
         <Home ref={homeRef} />
         <About id="about" className="page page-padding" ref={aboutRef} />
         <Skills id="skills" className="page page-padding" ref={skillsRef} />
-        <Contact id="contact" className="page page-padding end-padding" ref={contactRef} />
+        <Contact
+          id="contact"
+          className="page page-padding end-padding"
+          ref={contactRef}
+        />
       </Container>
     </Container>
   );

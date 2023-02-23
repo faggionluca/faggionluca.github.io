@@ -5,23 +5,23 @@ import brand from "@/assets/brand.svg";
 import { Link } from "react-scroll";
 
 type ResumeNavItem = {
-  name: string,
-  type: 'link' | "button"
-  scrollTo: string
-}
+  name: string;
+  type: "link" | "button";
+  scrollTo: string;
+};
 
 type NavBaseProps = {
-  items: Array<ResumeNavItem>
-}
+  items: Array<ResumeNavItem>;
+};
 
-export type NavProps = Omit<NavbarProps, "children"> & NavBaseProps
+export type NavProps = Omit<NavbarProps, "children"> & NavBaseProps;
 
 function NavLine() {
   return <div className="nav-line"></div>;
 }
 
 function ResumeNav(props: NavProps) {
-  const { items } = props
+  const { items } = props;
 
   return (
     <Navbar sticky="top" expand="md">
@@ -32,19 +32,25 @@ function ResumeNav(props: NavProps) {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            {
-              items.map((item, index) => (
-                item.type === 'link' ? (
-                  <Nav.Link as="div" key={index} className="mx-3 pe-auto cursor-pointer">
-                    <Link to={item.scrollTo} offset={-50}>{item.name}</Link>
-                  </Nav.Link>
-                ) : (
-                  <Button key={index} variant="primary" className="mx-3 fw-bold">
-                    <Link to={item.scrollTo} offset={-50}>{item.name}</Link>
-                  </Button>
-                )
-              ))
-            }
+            {items.map((item, index) =>
+              item.type === "link" ? (
+                <Nav.Link
+                  as="div"
+                  key={index}
+                  className="mx-3 pe-auto cursor-pointer"
+                >
+                  <Link to={item.scrollTo} offset={-50}>
+                    {item.name}
+                  </Link>
+                </Nav.Link>
+              ) : (
+                <Button key={index} variant="primary" className="mx-3 fw-bold">
+                  <Link to={item.scrollTo} offset={-50}>
+                    {item.name}
+                  </Link>
+                </Button>
+              )
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>

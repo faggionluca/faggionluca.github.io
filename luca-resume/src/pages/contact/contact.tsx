@@ -52,8 +52,8 @@ const Contact = forwardRef<HTMLDivElement, ContactProps>((props, ref) => {
               </ContactInfo>
               <ContactInfo icon={githubIcon} className="pt-4">
                 <span className="fs-3">
-                  <span>{t('my')}{" "}</span>
-                  <a href="https://github.com/darkimage">{t('github')}</a>
+                  <span>{t("my")} </span>
+                  <a href="https://github.com/darkimage">{t("github")}</a>
                 </span>
               </ContactInfo>
             </Stack>
