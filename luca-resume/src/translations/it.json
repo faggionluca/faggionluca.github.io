@@ -15,20 +15,20 @@
     },
     "about": {
       "title": "Qualcosa su di me",
-      "desc": "As a recent graduate from Università di Parma with a Laurea in Ingegneria Informatica, Elettronica e Telecomunicazioni, I am eager to start my career in the technology industry. Through various academic projects, I have honed my skills and developed a keen eye for detail and a deep understanding of software development methodologies. I am a team player who values open communication and collaboration, and I am eager to quickly adapt to new challenges and make meaningful contributions to a team. I am excited to learn and work with cutting-edge technologies and help drive innovation and progress in the field.",
+      "desc": "In quanto neolaureato presso l'Università di Parma con una Laurea in Ingegneria Informatica, Elettronica e Telecomunicazioni, sono ansioso di iniziare la mia carriera nell'industria tecnologica. Attraverso vari progetti accademici, ho affinato le mie competenze e sviluppato un occhio attento ai dettagli e una profonda comprensione delle metodologie di sviluppo software. Sono in grado di lavorare in modo collaborativo e supportare efficacemente gli obiettivi del team valorizzando la comunicazione aperta, e sono pronto per adattarmi rapidamente alle nuove sfide e di dare contributi significativi ad un team. Sono entusiasta di imparare e lavorare con tecnologie all'avanguardia e di contribuire all'innovazione e il progresso nel campo.",
       "historyTitle": "Educazione"
     },
     "skills": {
       "title": "Skills",
-      "desc": "From my academic background and practical experience, I have developed a wide range of technical and soft skills that I am eager to bring to a new role.",
-      "subtitle": "Languages",
-      "langDesc": "These are the languages that I have acquired the most expertise in, and I am confident in my ability to use them effectively in a professional setting.",
-      "frameworkTitle": "Frameworks and Technologies",
-      "frameworkDesc": "With a solid background in my studies, I have gained proficiency in various frameworks and technologies. This expertise, combined with my problem-solving skills and attention to detail, allows me to confidently use them in a professional setting to deliver successful results."
+      "desc": "Dalla mia formazione accademica e dall'esperienza pratica, ho sviluppato una vasta gamma di competenze tecniche e soft skills che mi consentono di contribuire attivamente al raggiungimento degli obiettivi del team.",
+      "subtitle": "Linguaggi di Programmazione",
+      "langDesc": "Queste sono i linguaggi di programmazione in cui ho acquisito maggior esperienza e sono sicuro della mia capacità di utilizzarli efficacemente in un ambiente professionale.",
+      "frameworkTitle": "Frameworks e Tecnologie",
+      "frameworkDesc": "Con una solida formazione accademica, ho acquisito competenze in vari framework e tecnologie. Questa esperienza, unita alle mie capacità di risoluzione dei problemi e alla mia attenzione ai dettagli, mi consente di utilizzarle con fiducia in un ambiente professionale per ottenere risultati di successo."
     },
     "contact": {
       "title": "Contattami",
-      "thankyou": "Thank you for visiting!",
+      "thankyou": "Grazie per la tua attenzione!",
       "github": "personal GitHub",
       "my": "my"
     }
