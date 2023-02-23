@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import React, { forwardRef, useMemo } from "react";
 import { Col, Container, ContainerProps, Row } from "react-bootstrap";
 import UnderlineDeco from "@/components/underlineDeco/underlineDeco";
 import CardDeco from "@/components/cardDeco/cardDeco";
@@ -9,13 +9,20 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
 import { Link } from 'react-scroll';
+import i18n from "@/i18n";
+import cvEng from '@/assets/luca-faggion-cv-en.pdf';
+import cvIta from '@/assets/luca-faggion-cv-it.pdf';
 
 function HomeLinkBar() {
   const { t } = useTranslation("translations", { keyPrefix: "home" });
 
+  const patternEN = /en/;
+  const patternIT = /it/;
+
   return (
     <div className="home-link-bar d-flex flex-column align-items-md-center align-items-lg-end py-3 px-5">
-      <a href="#CV">{t("downloadcv")}</a>
+      {patternEN.test(i18n.language) && <a href={cvEng}>{t("downloadcv")}</a>}
+      {patternIT.test(i18n.language) && <a href={cvIta}>{t("downloadcv")}</a>}
     </div>
   );
 }

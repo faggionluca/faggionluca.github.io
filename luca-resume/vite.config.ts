@@ -15,6 +15,7 @@ export default defineConfig({
       usePolling: true,
     },
   },
+  assetsInclude: ['**/*.pdf'],
   css: {
     preprocessorOptions: {
       scss: {

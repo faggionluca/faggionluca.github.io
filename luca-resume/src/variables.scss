@@ -17,16 +17,15 @@ $body-bg: #eef7ff;
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/utilities";
 
-// Helpers
-@import "~bootstrap/scss/helpers";
-
-// Utilities
-@import "~bootstrap/scss/utilities/api";
-// scss-docs-end import-stack
-
 $utilities: map-merge($utilities,
     ("cursor": (property: cursor,
         class: cursor,
         responsive: true,
         values: auto pointer grab,
       )));
+// Helpers
+@import "~bootstrap/scss/helpers";
+
+// Utilities
+@import "~bootstrap/scss/utilities/api";
+// scss-docs-end import-stack
