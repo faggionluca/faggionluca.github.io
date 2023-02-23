@@ -1,0 +1,36 @@
+{
+  "translations": {
+    "common": {
+      "about": "Profilo",
+      "skills": "Skills",
+      "contactme": "Contattami"
+    },
+    "home": {
+      "hi": "Ciao!",
+      "im": "Sono",
+      "titleDesc": "un aspirante ingegnere DevOps",
+      "titleSubText": "Sono un appassionato laureato in ingegneria disposto a imparare e padroneggiare nuove tecnologie, con una passione speciale per il DevOps.",
+      "readmore": "Continua a conoscermi",
+      "downloadcv": "Scarica CV"
+    },
+    "about": {
+      "title": "Qualcosa su di me",
+      "desc": "In quanto neolaureato presso l'Università di Parma con una Laurea in Ingegneria Informatica, Elettronica e Telecomunicazioni, sono ansioso di iniziare la mia carriera nell'industria tecnologica. Attraverso vari progetti accademici, ho affinato le mie competenze e sviluppato un occhio attento ai dettagli e una profonda comprensione delle metodologie di sviluppo software. Sono in grado di lavorare in modo collaborativo e supportare efficacemente gli obiettivi del team valorizzando la comunicazione aperta, e sono pronto per adattarmi rapidamente alle nuove sfide e di dare contributi significativi ad un team. Sono entusiasta di imparare e lavorare con tecnologie all'avanguardia e di contribuire all'innovazione e il progresso nel campo.",
+      "historyTitle": "Educazione"
+    },
+    "skills": {
+      "title": "Skills",
+      "desc": "Dalla mia formazione accademica e dall'esperienza pratica, ho sviluppato una vasta gamma di competenze tecniche e soft skills che mi consentono di contribuire attivamente al raggiungimento degli obiettivi del team.",
+      "subtitle": "Linguaggi di Programmazione",
+      "langDesc": "Queste sono i linguaggi di programmazione in cui ho acquisito maggior esperienza e sono sicuro della mia capacità di utilizzarli efficacemente in un ambiente professionale.",
+      "frameworkTitle": "Frameworks e Tecnologie",
+      "frameworkDesc": "Con una solida formazione accademica, ho acquisito competenze in vari framework e tecnologie. Questa esperienza, unita alle mie capacità di risoluzione dei problemi e alla mia attenzione ai dettagli, mi consente di utilizzarle con fiducia in un ambiente professionale per ottenere risultati di successo."
+    },
+    "contact": {
+      "title": "Contattami",
+      "thankyou": "Grazie per la tua attenzione!",
+      "github": "personal GitHub",
+      "my": "my"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@import "~bootstrap/scss/functions";
+
+$primary: #0b9ed9;
+
+$body-color: #082032;
+
+$min-contrast-ratio: 3;
+
+$font-family-base: 'Arial, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"';
+
+$body-bg: #eef7ff;
+
+// scss-docs-start import-stack
+// Configuration
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/maps";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/utilities";
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "cursor": (
+      property: cursor,
+      class: cursor,
+      responsive: true,
+      values: auto pointer grab,
+    ),
+  )
+);
+// Helpers
+@import "~bootstrap/scss/helpers";
+
+// Utilities
+@import "~bootstrap/scss/utilities/api";
+// scss-docs-end import-stack

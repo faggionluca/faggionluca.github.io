@@ -1,0 +1,27 @@
+.emphasis {
+  color: #255888;
+}
+
+.about-art {
+  position: absolute;
+  bottom: -25px;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.about-art-container {
+  position: relative;
+  overflow: visible;
+  height: 250px;
+  width: 250px;
+  margin-top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@include media-breakpoint-up(lg) {
+  .about-art-container {
+    margin-top: 0;
+  }
+}

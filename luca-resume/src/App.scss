@@ -1,0 +1,32 @@
+@import "bootstrap.scss";
+
+body {
+  background: linear-gradient(#eef7ff, #f2f3ff);
+  background-attachment: fixed;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #255888;
+}
+
+.page {
+  min-height: 90vh;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+@include media-breakpoint-up(md) {
+  .page-padding {
+    padding-top: 125px;
+    padding-bottom: 125px;
+  }
+}
+
+.end-padding {
+  padding-bottom: 125px !important;
+}
