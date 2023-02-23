@@ -9,7 +9,7 @@ import pythonIcon from "@/assets/pythonicon.png";
 import jsIcon from "@/assets/jsicon.png";
 import djangoIcon from "@/assets/djangoicon.png";
 import nodeIcon from "@/assets/nodeicon.png";
-import dockerIcon from "@/assets/dockerIcon.png";
+import dockerIcon from "@/assets/dockericon.png";
 import useBreakpoint from "@/utilities/useBreakpoint";
 
 type SkillsProps = HTMLAttributes<HTMLDivElement>;
@@ -31,9 +31,8 @@ function SkillsDecos(props: SkillsDecoProps) {
     <Row {...rest}>
       {data.map((value, index) => (
         <Col
-          className={`${colClasses} ${
-            breakpoint ? "pt-5" : index !== 0 ? "pt-5" : "pt-2"
-          }`}
+          className={`${colClasses} ${breakpoint ? "pt-5" : index !== 0 ? "pt-5" : "pt-2"
+            }`}
           key={index}
         >
           <ContainerDeco>
