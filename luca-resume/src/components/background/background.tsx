@@ -15,6 +15,7 @@ function useParallax(
 ) {
   const { scrollYProgress } = useScroll({
     target: target,
+    layoutEffect: false,
     offset: ["start end", "end start"],
     ...scrollOptions,
   });
