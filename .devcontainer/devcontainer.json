@@ -11,6 +11,9 @@
       "version": "lts"
     }
   },
+  "mounts": [
+    "source=${localWorkspaceFolderBasename}-node_modules,target=${containerWorkspaceFolder}/luca-resume/node_modules,type=volume"
+  ],
   "customizations": {
     // Configure properties specific to VS Code.
     "vscode": {
@@ -20,5 +23,6 @@
         "esbenp.prettier-vscode"
       ]
     }
-  }
+  },
+  "remoteUser": "root"
 }
