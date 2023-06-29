@@ -14,6 +14,7 @@ import githubIcon from "@/assets/githubicon.png";
 import CardDeco from "@/components/cardDeco/cardDeco";
 import clipWaved from "@/assets/clip-man-waves.png";
 import UnderlineDeco from "@/components/underlineDeco/underlineDeco";
+import { ContactInfo as StaticContactInfo } from "@/info";
 
 type ContactInfoBaseProps = {
   icon: string;
@@ -47,13 +48,13 @@ const Contact = forwardRef<HTMLDivElement, ContactProps>((props, ref) => {
               <ContactInfo icon={emailIcon}>
                 <span className="fs-3">
                   <span>e-mail: </span>
-                  <a href="mailto:luc-af@live.it">luc-af@live.it</a>
+                  <a href={`mailto:${StaticContactInfo.email}`}>{StaticContactInfo.email}</a>
                 </span>
               </ContactInfo>
               <ContactInfo icon={githubIcon} className="pt-4">
                 <span className="fs-3">
                   <span>{t("my")} </span>
-                  <a href="https://github.com/faggionluca">{t("github")}</a>
+                  <a href={StaticContactInfo.github}>{t("github")}</a>
                 </span>
               </ContactInfo>
             </Stack>
